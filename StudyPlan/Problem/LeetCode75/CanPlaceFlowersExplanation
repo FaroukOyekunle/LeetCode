@@ -1,0 +1,11 @@
+Explanation:
+-   Iterate through the flowerbed array.
+-   If the current plot is empty (0), then i check if the left and right neighbors are also empty.
+-   If both are empty (or out of bounds), then we plant a flower (1) and increment the count.
+-   If at any point count reaches n, then we return true.
+-   If the loop completes without reaching n, we return false.
+
+
+Time Complexity: O(N), where 𝑁 is the length of the flowerbed.
+
+Space Complexity: O(1), as we modify the input array in place.
