@@ -1,0 +1,14 @@
+Explanation:
+-   I basically use a HashSet to store vowels (both uppercase and lowercase) for quick lookup.
+-   Then convert the string to a character array to perform in-place modifications.
+-   Use two pointers (left and right):
+    -   Move variable left forward until it finds a vowel.
+    -   Move variable right backward until it finds a vowel.
+    -   Then swap the vowels at left and right, then move both pointers inward.
+-   We then finally return the modified string after processing.
+
+Time & Space Complexity:
+
+Time Complexity: O(N), (each character is processed at most once).
+
+Space Complexity: O(N), (char array for in-place modifications).
