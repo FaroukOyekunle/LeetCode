@@ -1,0 +1,20 @@
+Explanation:
+String Length Calculation:
+- I compute the lengths of word1 and word2 to determine the maximum number of iterations required.
+
+Iteration:
+- Iterate from index 0 to maxLength - 1, where maxLength is the maximum of word1.Length and word2.Length.
+
+Conditional Appending:
+- At each iteration, if the current index is within word1's length, we append word1[i] to the result.
+- Similarly, if the current index is within word2's length, we also append word2[i] to the result.
+
+StringBuilder Usage:
+- Use StringBuilder for efficient concatenation of characters during the iteration.
+
+Return:
+- Convert the StringBuilder to a string and return the merged result.
+
+Time & Space Complexity:
+- Time Complexity: O(n), where n is the maximum length of the two strings.
+- Space Complexity: O(n) for the StringBuilder that holds the merged string.
