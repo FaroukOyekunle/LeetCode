@@ -1,0 +1,27 @@
+Explanation:
+
+-   Initialization:
+
+    -   We initialize two variables, first and second, to int.MaxValue. These variables represent the smallest and second smallest candidates for our increasing triplet.
+
+-   Iteration through the Array:
+
+    -   For each number num in the array:
+        -       Update first:
+            -   If num is less than or equal to first, update first to num.
+            -   This ensures that first always holds the smallest number encountered so far.
+        
+        -       Update second:
+            -   Else if num is less than or equal to second, update second to num.
+            -   At this point, first is the smallest, and second is the next smallest candidate following first.
+        
+        -       Triplet Found:
+            -   If num is greater than both first and second, then an increasing triplet exists (first, second, num), so we immediately return true.
+-   Return:
+
+    -   If the loop completes without finding such a triplet, we return false.
+
+-   Time & Space Complexity:
+
+    -   Time Complexity: O(n) — We traverse the array once.
+    -   Space Complexity: O(1) — Only two extra variables are used.
