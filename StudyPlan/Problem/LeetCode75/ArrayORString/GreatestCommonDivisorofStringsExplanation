@@ -1,0 +1,22 @@
+Explanation:
+
+Validation:
+
+-   First, the solution checks whether str1 + str2 equals str2 + str1.
+    -   If these two concatenated strings are not equal, it means that the two strings do not share a common pattern, and with that no common divisor string exists. In this case, the method returns an empty string.
+
+GCD Computation:
+
+-   The algorithm calculates the greatest common divisor (GCD) of the lengths of str1 and str2 using a helper function.
+    -   The GCD function is implemented recursively using the Euclidean algorithm.
+    -   This GCD value represents the maximum possible length of a string that could be repeated to form both str1 and str2.
+
+Result Construction:
+
+-   Once the GCD of the lengths is determined, the solution returns the prefix of str1 with length equal to the GCD.
+    -   This prefix is guaranteed to be the lexicographically largest common divisor string that can divide both str1 and str2.
+
+Time & Space Complexity:
+
+-   Time Complexity: O(n + m) — The concatenation check runs in linear time with respect to the lengths of str1 and str2, and the GCD computation is efficient.
+-   Space Complexity: O(n + m) — Space is used for the concatenated strings during the comparison.
