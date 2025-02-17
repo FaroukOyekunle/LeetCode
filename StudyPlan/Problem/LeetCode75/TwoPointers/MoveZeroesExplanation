@@ -1,0 +1,21 @@
+Explanation:
+-   Two-Pointer Approach:
+
+    -   insertPos: Points to the next position where a non-zero element should be placed.
+    -   Iteration: Traverse the array with index i.
+
+-   rocessing Non-Zero Elements:
+
+    -   If nums[i] is non-zero, we place it at nums[insertPos].
+    -   If i is not equal to insertPos, we set nums[i] to zero after moving the non-zero element.
+    -   Then we increment insertPos to prepare for the next non-zero element.
+
+-   Outcome:
+
+    -   All non-zero elements are moved to the beginning of the array in their original order.
+    -   While zeros are moved to the end of the array.
+
+-   Time & Space Complexity:
+
+    -   Time Complexity: O(n) — the array is traversed once.
+    -   Space Complexity: O(1) — modifications are made in-place with a constant number of extra variables.
