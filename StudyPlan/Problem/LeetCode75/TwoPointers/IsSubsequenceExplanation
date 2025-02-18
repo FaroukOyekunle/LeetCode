@@ -1,0 +1,35 @@
+Explanation:
+Preprocessing t:
+
+-   Purpose:
+    -   To handle the follow-up scenario where there are many queries (incoming s strings), we preprocess t once.
+
+-   Method:
+    -   We create a dictionary that maps each character in t to a list of its indices in t.
+    -   This allows fast lookups of where each character occurs in t.
+
+-   Processing s:
+
+    -   Two-step Process for Each Character in s:
+        -   For each character in s, we check if it exists in the dictionary. If not, s cannot be a subsequence.
+        -   Then we use binary search on the list of indices for that character to find the smallest index that is at least the current required position (currPos).
+        -  We update currPos to one more than the found index to ensure the order of characters is maintained.
+
+-   Binary Search Helper:
+
+    -   Functionality:
+        -   Given a sorted list of indices and a target value, it returns the smallest index that is greater than or equal to the target.
+        -   If no such index exists, it returns -1, indicating that the current character in s cannot be found in t after currPos.
+
+-   Time & Space Complexity:
+
+-   Preprocessing t:
+    -   Time: O(t.Length)
+    -   Space: O(t.Length)
+
+-   Querying s:
+    -   For each character in s, a binary search is performed in O(log(t.Length)).
+    -   Overall, each query runs in O(s.Length * log(t.Length)).
+
+-   Follow-up Benefit:
+    -   Since t is preprocessed once, each subsequent query s can be checked efficiently.
