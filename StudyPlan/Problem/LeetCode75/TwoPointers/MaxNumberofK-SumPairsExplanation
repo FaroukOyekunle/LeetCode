@@ -1,0 +1,23 @@
+Explanation:
+
+-   Dictionary Usage:
+
+    -   A dictionary frequency keeps track of the counts of numbers that are still available for pairing.
+
+-   Iterate Over nums:
+
+    -   For each number num in the array, compute its complement as k - num.
+    -   We check if the complement exists in freq with a positive count:
+        -   If yes, an operation (pair) is possible:
+            -   Increase the operations counter.
+            -   Decrement the count for the complement since it's now paired.
+        -   If not, add or increment the count of num in the dictionary to be used as a potential complement for a future number.
+
+-   Result:
+
+    -   After processing all numbers, the operations variable holds the maximum number of pairs whose sum is equal to k.
+
+-   Complexity:
+
+    -   Time Complexity: O(n) on average, where n is the number of elements in nums.
+    -   Space Complexity: O(n) in the worst case for the dictionary.
