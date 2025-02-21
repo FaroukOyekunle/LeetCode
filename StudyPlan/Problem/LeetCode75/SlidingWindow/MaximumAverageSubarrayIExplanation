@@ -1,0 +1,20 @@
+Explanation:
+
+-   Initial Sum Calculation:
+
+    -   We compute the sum of the first k elements of nums and store it in sum.
+    -   This sum represents the total for the first window of size k.
+
+-   Sliding Window Process:
+
+    -   We then slide the window through the array from index k to n - 1.
+    -   For each new position, we update the sum by subtracting the element that is leaving the window (nums[i - k]) and adding the element that is entering the window (nums[i]).
+    -   We keep track of the maximum sum (maxSum) encountered during this process.
+
+-   Result Computation:
+    -   After processing all windows, we calculate the maximum average by dividing maxSum by k.
+
+-   Complexity:
+
+    -   Time Complexity: O(n) since we traverse the array once.
+    -   Space Complexity: O(1) as we only use a few extra variables.
