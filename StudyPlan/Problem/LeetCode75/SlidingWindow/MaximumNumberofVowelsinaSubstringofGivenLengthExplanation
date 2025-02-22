@@ -1,0 +1,30 @@
+Explanation:
+
+-   Vowel Lookup:
+
+    -   A HashSet<char> is used to quickly check if a character is a vowel ('a', 'e', 'i', 'o', 'u').
+
+-   Initial Window Setup:
+
+    -   The first k characters of the string are processed to count the number of vowels, initializing both count and maxCount.
+
+-   Sliding Window Technique:
+
+-   For each subsequent character from index k to the end of the string:
+
+-   Slide Out:
+
+    -   Remove the effect of the character that is leaving the window (i.e., at position i - k). If it's a vowel, decrement the count.
+
+-   Slide In:
+    -   Add the effect of the new character entering the window (i.e., at position i). If it's a vowel, increment the count.
+
+-   Update Maximum:
+    -   The maximum vowel count (maxCount) is updated if the current window's count is higher.
+
+-   Early Termination:
+    -   If maxCount equals k, that's the maximum possible number of vowels in a window of length k, so the function returns immediately.
+
+-   Result:
+
+The function returns the highest number of vowels found in any contiguous substring of length k.
