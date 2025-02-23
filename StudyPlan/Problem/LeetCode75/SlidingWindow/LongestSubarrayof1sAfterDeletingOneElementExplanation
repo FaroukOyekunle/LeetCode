@@ -1,0 +1,24 @@
+Explanation:
+
+-   Sliding Window Technique:
+
+    -   We maintain a window with two pointers, left and right.
+    -   As we extend the window with right, we count the number of zeros in the current window.
+
+-   Controlling Zero Count:
+
+    -   We allow at most one zero in the window since we are allowed to delete one element.
+    -   If the count of zeros exceeds one, we increment left until the window is valid again (i.e., contains at most one zero).
+
+-   Window Length Calculation:
+
+    -   The length of the window is (right - left + 1). Since one element must be deleted from this window, the effective length of consecutive 1's becomes (right - left + 1 - 1) = (right - left).
+    -   We keep track of the maximum effective length in res.
+
+-   Edge Case - All Ones:
+
+    -   If the array has all 1's, we still have to delete one element, and the maximum subarray length of 1's becomes nums.Length - 1.
+Complexity:
+
+-   Time Complexity: O(n), as we traverse the array once.
+-   Space Complexity: O(1), using only a few extra variables.
