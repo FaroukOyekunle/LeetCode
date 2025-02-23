@@ -1,0 +1,17 @@
+Explanation:
+
+-   Sliding Window Technique:
+
+    -   We maintain a window defined by two pointers, left and right.
+    -   As we iterate with the right pointer, we count how many zeros are in the current window.
+
+-   Zero Count Management:
+
+    -   If the current element nums[right] is 0, increment the zeros counter.
+    -   If the count of zeros exceeds k, we move the left pointer to the right until the zero count is within the allowed limit (<= k).
+
+-   Maximum Length Calculation:
+
+    -   At each step, we calculate the length of the current window (right - left + 1) and update the maximum length (maxLen) if this window is larger.
+
+Finally, maxLen holds the length of the longest subarray that can be formed by flipping at most k zeros to ones.
