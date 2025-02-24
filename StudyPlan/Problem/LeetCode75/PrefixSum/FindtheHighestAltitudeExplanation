@@ -1,0 +1,11 @@
+Explanation:
+
+-   Initial Conditions:
+    -   The biker starts at altitude 0.
+
+-   Processing Gains:
+    -   We iterate through the gain array.
+    -   For each element delta, add it to the current altitude.
+    -   Update maxAltitude by comparing it with the current altitude.
+-   Result:
+    -   Return maxAltitude, which represents the highest altitude reached during the trip.
