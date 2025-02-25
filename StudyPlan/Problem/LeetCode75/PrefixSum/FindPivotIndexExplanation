@@ -1,0 +1,15 @@
+Explanation:
+
+-   Total Sum Calculation:
+
+    -   First, we compute the total sum of the array. This will help us determine the sum of numbers to the right of any given index.
+    -   Iterate Through the Array:
+
+    -   We initialize leftSum as 0.
+-   For each index i:
+    -   We check if the sum of numbers to the left (leftSum) equals the sum of numbers to the right, calculated as total - leftSum - nums[i].
+    -   If the condition is met, i is the pivot index and we return it immediately.
+    -   Otherwise, we add nums[i] to leftSum and continue to the next index.
+-   Return -1:
+
+If no such pivot index is found after processing all indices, the function returns -1.
