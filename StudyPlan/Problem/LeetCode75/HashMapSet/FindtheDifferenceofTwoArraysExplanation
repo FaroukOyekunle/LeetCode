@@ -1,0 +1,19 @@
+Explanation:
+
+-   Unique Element Sets:
+    -   Convert nums1 and nums2 into HashSet<int> objects (set1 and set2) to remove duplicates and allow fast lookups.
+
+-   Finding Differences:
+
+    -   For nums1:
+        -   Iterate through set1 and add any number not present in set2 to diff1.
+    -   For nums2:
+        -   Iterate through set2 and add any number not present in set1 to diff2.
+
+-   Return Format:
+    -   The method returns a list containing two lists: diff1 (numbers unique to nums1) and diff2 (numbers unique to nums2).
+
+Complexity:
+
+-   Time Complexity: O(n + m), where n and m are the lengths of nums1 and nums2, respectively.
+-   Space Complexity: O(n + m), due to the use of hash sets and result lists.
