@@ -1,0 +1,23 @@
+Explanation:
+
+-   Objective:
+    -   Determine, for each kid, if giving them extraCandies would allow them to have at least as many candies as the kid with the maximum candies currently.
+
+-   Step 1: Find the Maximum Candy Count
+
+    -   Initialize maxCandy to 0.
+    -   Loop through the candies array:
+    -   For each candy, if it is greater than maxCandy, update maxCandy.
+    -   After the loop, maxCandy holds the highest number of candies any kid currently has.
+
+-   Step 2: Determine Which Kids Can Reach or Exceed the Maximum
+
+    -   Create a list result to store boolean values for each kid.
+    -   Loop through the candies array again:
+    -   For each candy, check if candy + extraCandies >= maxCandy.
+    -   Add the resulting boolean value (true or false) to the result list.
+    -   This evaluates whether giving a kid all extraCandies would allow them to have at least as many candies as the current maximum.
+
+-   Step 3: Return the Result
+
+    -   Return the result list, which contains a boolean for each kid indicating whether they can have the greatest number of candies after receiving the extra candies.
