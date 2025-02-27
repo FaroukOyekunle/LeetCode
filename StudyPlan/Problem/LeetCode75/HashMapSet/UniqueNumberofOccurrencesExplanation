@@ -1,0 +1,11 @@
+Explanation:
+
+-   Count Occurrences:
+    -   We use a Dictionary<int, int> to count the frequency of each element in arr.
+
+-   Check Uniqueness:
+    -   We iterate over the frequency values and insert them into a HashSet<int>.
+    -   If a frequency is already in the set, it means two values have the same occurrence count, and we return false.
+
+-   Return:
+    -   If all frequency counts are unique, we return true.
