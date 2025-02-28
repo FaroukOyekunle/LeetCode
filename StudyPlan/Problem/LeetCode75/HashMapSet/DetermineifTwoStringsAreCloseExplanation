@@ -1,0 +1,23 @@
+Explanation:
+
+-   Length Check:
+
+    -   If word1 and word2 have different lengths, they cannot be close.
+
+-   Frequency Counting:
+
+    -   Two arrays freq1 and freq2 of size 26 (for each lowercase letter) are used to count the frequency of each character in word1 and word2.
+
+-   Set of Characters:
+    -   For each letter, if one word has the letter (frequency > 0) and the other does not, then the words are not close.
+    -   This condition ensures that both words have the same set of distinct characters.
+
+-   Frequency Pattern Matching:
+
+    -   After counting, the frequency arrays are sorted.
+    -   If the sorted frequency counts are the same, it means that one can reassign the frequencies between characters using Operation 2 (swapping frequency counts).
+Otherwise, if they differ, the strings are not close.
+
+-   Return:
+
+    -   The function returns true if both conditions (same set of characters and same frequency pattern) are met, otherwise false.
