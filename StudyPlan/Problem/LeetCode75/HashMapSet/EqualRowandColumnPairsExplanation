@@ -1,0 +1,20 @@
+Explanation:
+
+-   Row Representation:
+
+    -   We iterate through each row of the grid, and create a string representation by concatenating the elements with a delimiter (e.g., a comma).
+    -   These string representations are stored in a dictionary rowMap along with their frequency.
+
+-   Column Representation:
+
+    -   We similarly build the string representation for each column.
+    -   For each column, we look up its representation in rowMap and add the frequency to our result. This works because a valid pair exists if the row and column strings match exactly.
+
+-   Result:
+
+    -   The total number of pairs (row, column) where the row equals the column is returned.
+
+-   Complexity:
+
+    -   Time Complexity: O(n^2) due to iterating over each element of the n x n grid twice (once for rows and once for columns).
+    -   Space Complexity: O(n^2) in the worst-case scenario for storing row representations.
