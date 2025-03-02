@@ -1,0 +1,13 @@
+Explanation:
+
+-   Stack Simulation Using StringBuilder:
+    -   We iterate over the input string s and use a StringBuilder to simulate a stack.
+
+-   Processing Each Character:
+    -   If the character is not a star (*):
+    -   Append the character to the StringBuilder.
+    -   If the character is a star (*):
+    -   Remove the most recent character from the StringBuilder (i.e., pop from the stack).
+
+-   Result:
+    -   After processing all characters, the StringBuilder contains the string after all operations, which we return.
