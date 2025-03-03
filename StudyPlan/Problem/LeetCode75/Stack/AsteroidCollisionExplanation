@@ -1,0 +1,27 @@
+Explanation:
+
+-   Using a Stack for Simulation:
+    -   We use a stack to keep track of the asteroids that are still "alive" as we iterate through the array.
+
+-   Processing Each Asteroid:
+    -   For each asteroid in the input array:
+        -   Collision Scenario:
+            If the asteroid is moving left (negative) and the stack's top asteroid is moving right (positive), a collision might occur.
+
+        -   Collision Logic:
+            -   Smaller Opponent:
+                    If the asteroid on the stack (moving right) is smaller (in absolute value) than the current asteroid, it explodes (is popped), and we continue checking further.
+            -   Equal Size:
+                    If the top asteroid and the current asteroid are equal in absolute value, both explode (pop the top, mark the current as exploded).
+            -   Larger Opponent:
+                    If the top asteroid is larger, the current asteroid explodes (we mark it as exploded and break out of the loop).
+        
+        -   No Collision or Survived Collisions:
+                If the current asteroid does not explode after the collisions, it is pushed onto the stack.
+
+    -   Result Construction:
+        -   After processing all asteroids, the stack contains the surviving asteroids.
+        -   We convert the stack to an array and reverse it to restore the original order.
+    -   Complexity:
+        -   Time Complexity: O(n) because each asteroid is processed once.
+        -   Space Complexity: O(n) for the stack in the worst-case scenario.
