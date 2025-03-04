@@ -1,0 +1,18 @@
+Explanation:
+
+-   Queue for Timestamps:
+    -   We use a Queue<int> to store the timestamps of the incoming requests. Since the ping function is called with strictly increasing t values, the queue maintains the timestamps in ascending order.
+
+-   Adding New Request:
+    -   When Ping(t) is called, the timestamp t is enqueued.
+
+-   Removing Outdated Requests:
+    -   We then remove (dequeue) all timestamps from the front of the queue that are less than t - 3000. These represent requests that occurred more than 3000 milliseconds ago.
+
+-   Counting Recent Requests:
+    -   After removal, the count of elements in the queue represents the number of requests within the inclusive time range [t - 3000, t].
+
+Complexity:
+
+-   Time Complexity: O(1) amortized per ping, as each request is enqueued and dequeued at most once.
+-   Space Complexity: O(n) in the worst-case scenario for storing timestamps, where n is the number of pings within the 3000ms window.
