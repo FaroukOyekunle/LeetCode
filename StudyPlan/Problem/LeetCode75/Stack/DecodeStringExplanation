@@ -1,0 +1,19 @@
+Explanation:
+
+-   Recursive Decoding:
+    -   We use a helper function Decode that recursively processes the input string s starting from a given index (passed by reference). The function continues until it reaches a closing bracket ']' or the end of the string.
+
+-   Parsing the Number:
+    -   When encountering a digit, we parse the complete number (which represents how many times the following substring should be repeated).
+
+-   Handling Brackets:
+    -   After parsing the number, we skip the opening bracket '[' and recursively decode the substring inside the brackets. Once the recursive call returns the decoded substring, we skip the corresponding closing bracket ']'.
+
+-   Repeating the Substring:
+    -   The decoded substring is then repeated the specified number of times (count) and appended to the result.
+
+-   Appending Letters:
+    -   If the character is not a digit, it is directly appended to the result.
+
+-   Returning the Final Decoded String:
+    -   The final result is returned after processing the entire string.
