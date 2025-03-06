@@ -1,0 +1,24 @@
+Explanation:
+Initialization:
+
+Two queues (radiant and dire) are used to store the indices of the senators from each party.
+We iterate through the senate string and enqueue the index of each senator into the appropriate queue.
+
+-   Simulation of the Rounds:
+
+    -   While both queues are non-empty (i.e., both parties have senators that can still vote):
+        -   Dequeue the front elements from both radiant and dire. These represent the next available senators from each party.
+        
+        -   Compare their indices:
+            -   The senator with the smaller index gets to ban the other. For example, if rIndex < dIndex, the Radiant senator bans the Dire senator.
+            -   The winning senator is then re-enqueued with an index increased by n. This simulates that after the current round, the senator will appear again in the next round at a later position.
+
+-   Determining the Winner:
+
+    -   When one of the queues becomes empty, it means that all senators of that party have been banned.
+    -   The function returns "Radiant" if the Radiant queue still has senators; otherwise, it returns "Dire".
+
+Complexity:
+
+-   Time Complexity: O(n) because each senator is processed a constant number of times.
+-   Space Complexity: O(n) for storing the indices in the queues.
