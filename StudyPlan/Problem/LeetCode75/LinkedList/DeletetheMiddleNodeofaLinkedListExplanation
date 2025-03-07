@@ -1,0 +1,19 @@
+Explanation:
+
+- Edge Case Handling:
+
+    -   If the linked list has only one node (head.next == null), then after deleting the middle node, there will be no nodes left, so we return null.
+
+-   Two-Pointer Technique:
+
+    -   We initialize two pointers, slow and fast, both starting at the head of the list.
+    -   fast moves two steps at a time, while slow moves one step at a time.
+    -   When fast reaches the end of the list (or fast.next is null), slow will be at the middle node.
+
+-   Deleting the Middle Node:
+
+    -   We keep a pointer prev to track the node immediately before slow.
+    -   Once the middle node (slow) is found, we remove it by setting prev.next = slow.next.
+Return:
+
+    -   Finally, we return the head of the modified linked list.
