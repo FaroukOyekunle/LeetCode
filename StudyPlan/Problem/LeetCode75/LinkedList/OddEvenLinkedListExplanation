@@ -1,0 +1,21 @@
+Explanation:
+
+-   Initial Setup:
+
+    -   If the linked list is empty, we return head immediately.
+    -   We initialize two pointers: odd starting at head (first node) and even starting at head.next (second node).
+    -   We store evenHead to later attach the even list after the odd list.
+
+-   Reordering Process:
+
+    -   While there are nodes remaining in the even sequence (even != null && even.next != null):
+    -   Set odd.next to even.next (the next odd-indexed node), and move the odd pointer forward.
+    -   Then, set even.next to odd.next (the next even-indexed node), and move the even pointer forward.
+    -   This effectively groups all odd-indexed nodes at the beginning and even-indexed nodes separately while preserving their relative order.
+
+-   Final Merge:
+
+    -   After reordering, attach the even list (starting from evenHead) after the odd list by setting odd.next = evenHead.
+Return:
+
+    -   The modified linked list head is returned.
