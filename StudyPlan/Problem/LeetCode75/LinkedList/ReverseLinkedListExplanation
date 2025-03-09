@@ -1,0 +1,20 @@
+Explanation:
+
+-   Iterative Approach:
+
+    -   We initialize two pointers: prev (set to null) and curr (set to the head of the list).
+    -   In each iteration, we store curr.next in a temporary variable, then reverse the link by setting curr.next to prev.
+    -   Move prev to curr and curr to the next node (from the temporary variable).
+    -   When curr becomes null, prev is the new head of the reversed list.
+
+-   Recursive Approach:
+
+    -   The base case is when the list is empty or contains only one node.
+    -   For a list with more than one node, we recursively reverse the rest of the list.
+    -   Once the rest of the list is reversed, we set the next node’s next pointer to the current node, effectively reversing the link.
+    -   Finally, we set the current node’s next pointer to null and return the new head obtained from the recursive call.
+
+-   Usage:
+
+    -   The main ReverseList method calls either the iterative or recursive helper based on your preference.
+    -   Both methods achieve O(n) time complexity. The iterative method uses O(1) space, while the recursive method uses O(n) space for the call stack.
