@@ -1,0 +1,16 @@
+Explanation:
+
+-   Finding the Middle:
+    -   We use the slow and fast pointer technique. While fast advances two nodes at a time and slow advances one node at a time, 
+        slow reaches the middle of the list. For an even-length list, slow will point to the start of the second half.
+
+-   Reversing the Second Half:
+    -   Starting from the slow pointer, we reverse the linked list using the standard iterative approach. After reversing, 
+        prev will be the new head of the reversed second half.
+
+-   Computing Twin Sums:
+    -   With the first half (starting at head) and the reversed second half (starting at prev), we traverse both halves simultaneously. 
+        The twin sum for each pair is the sum of the corresponding nodes. We update maxSum with the maximum twin sum encountered.
+
+-   Returning the Result:
+    -   Finally, the maximum twin sum is returned.
