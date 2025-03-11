@@ -1,0 +1,16 @@
+Explanation:
+
+-   Base Case:
+
+    -   If root is null, return 0 since an empty tree has no depth.
+
+-   Recursive Depth Calculation:
+    -   Recursively find the depth of the left subtree (leftDepth).
+    -   Recursively find the depth of the right subtree (rightDepth).
+
+-   Return the Maximum Depth:
+    -   Since the maximum depth is determined by the longest path from root to a leaf, we take Math.Max(leftDepth, rightDepth) + 1 (adding 1 for the root node itself).
+
+    Time & Space Complexity:
+    -   Time Complexity: 𝑂(𝑛), since each node is visited once.
+    -   Space Complexity: 𝑂(ℎ), where ℎ is the height of the tree (in the worst case, 𝑂(𝑛) for a skewed tree, 𝑂(log⁡ 𝑛) for a balanced tree).
