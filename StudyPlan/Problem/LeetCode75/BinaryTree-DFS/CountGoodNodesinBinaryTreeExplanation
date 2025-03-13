@@ -1,0 +1,12 @@
+Explanation
+
+-   Main Idea: A node is considered good if its value is greater than or equal to all node values on the path from the root to that node.
+
+-   DFS Traversal:
+    -   We perform a Depth-First Search starting from the root.
+    -   Carry along a variable maxSoFar which holds the maximum value encountered from the root to the current node.
+    -   At each node, if node.val >= maxSoFar, we increment our good node count by 1 and update maxSoFar.
+    -   Recursively traverse the left and right children with the updated maxSoFar.
+
+-   Time Complexity:𝑂(𝑛), where 𝑛 is the number of nodes in the tree. We visit each node exactly once.
+-   Space Complexity: 𝑂(ℎ) in the worst case for the recursion stack, where ℎ is the height of the tree. In a balanced tree, ℎ≈log𝑛. In a skewed tree, ℎ can be 𝑂(𝑛).
