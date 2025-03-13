@@ -1,0 +1,19 @@
+Explanation:
+
+-   LeafSimilar Method:
+
+    -   Initializes two lists to store leaf nodes of both trees.
+    -   Calls the GetLeaves method to gather the leaves.
+    -   Compares the two lists using SequenceEqual() to check if the leaf sequences match.
+
+-   GetLeaves Method:
+
+    -   Uses Depth-First Search (DFS) to traverse the tree.
+    -   If a leaf node is found, it's added to the list.
+    -   Recursively explores the left and right children.
+
+-   Time Complexity:
+    -   Each tree is traversed once: 𝑂(𝑛+𝑚), where 𝑛 and 𝑚 are the number of nodes in the two trees.
+    -   Comparing two lists takes 𝑂(min(𝑛,𝑚)).
+    -   Space Complexity: Space for recursion stack (DFS): 𝑂(ℎ), where ℎ is the height of the tree.
+    -   Space for storing leaf values: 𝑂(𝑛+𝑚.)
