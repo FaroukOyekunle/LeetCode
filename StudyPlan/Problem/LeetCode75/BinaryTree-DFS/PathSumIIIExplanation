@@ -1,0 +1,22 @@
+Explanation:
+
+-   Prefix Sum Concept:
+
+    -   We track the cumulative sum of node values along the path.
+    -   Store counts of previously seen cumulative sums in a dictionary (prefixSumMap).
+    -   A valid path is found when currentSum - targetSum exists in prefixSumMap.
+
+-   DFS Traversal:
+
+    -   Recursively explore left and right subtrees.
+    -   Update currentSum and check how many times currentSum - targetSum appears in prefixSumMap.
+    -   Add currentSum to prefixSumMap and increment its count.
+    -   Backtrack by decrementing prefixSumMap[currentSum] after returning from recursion.
+
+-   Base Case:
+
+    -   If node == null, return 0 (no valid paths in an empty subtree).
+
+-   Time Complexity:
+    -   O(N) → Each node is visited once.
+    -   O(N) space → For the prefix sum dictionary and recursion stack in the worst case.
