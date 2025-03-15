@@ -1,0 +1,17 @@
+Explanation:
+
+-   Initialize maxZigZag to track the longest zigzag path.
+
+-   DFS Traversal
+    -   Start DFS from the left and right children of the root.
+    -   If moving left, the next move should be right, and vice versa.
+    -   If the move continues in the same direction, reset the count to 1.
+    -   If the move changes direction, increment the count.
+
+-   Update maxZigZag at each step.
+
+-   Base Case: Stop recursion when node == null.
+
+Time Complexity:
+-   DFS visits each node once → 𝑂(𝑁), where 𝑁 is the number of nodes.
+-   Space Complexity: 𝑂(𝐻) for recursion stack (worst case: 𝑂(𝑁) for a skewed tree, 𝑂(log⁡𝑁) for balanced trees).
