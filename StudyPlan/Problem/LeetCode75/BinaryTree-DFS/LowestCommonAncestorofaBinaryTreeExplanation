@@ -1,0 +1,16 @@
+Approach
+
+-   Base Case:
+
+    -   If root is null, return null (no ancestor found).
+    -   If root matches p or q, return root (found one of the target nodes).
+
+-   Recursive Traversal:
+
+    -   Recursively search in the left and right subtrees.
+    -   If both left and right return non-null values, root is the Lowest Common Ancestor.
+    -   If only one subtree returns a non-null value, return that non-null value.
+
+-   Final Result:
+
+The function returns the node where p and q diverge in the tree.
