@@ -1,0 +1,26 @@
+Explanation
+
+-   Main Idea:
+    -   Use level-order traversal (BFS) to capture the rightmost node at each level of the binary tree.
+
+-   Step-by-Step Approach:
+
+    -   Edge Case: If the tree is empty (root is null), return an empty list.
+
+-   BFS Initialization:
+    -   Use a queue to perform a breadth-first search (BFS) starting from the root.
+
+-   Process Each Level:
+    -   For each level, determine the number of nodes (levelCount).
+    -   Iterate through all nodes in that level.
+    -   The last node processed at the level (when i == levelCount - 1) is the rightmost node.
+    -   Add its value to the result.
+
+-   Enqueue Children:
+    -   Enqueue the left and right children of the current node if they exist.
+    -   Continue:
+    -   Repeat the process until all levels are processed.
+
+-   Time Complexity: 𝑂(𝑛), since each node is processed exactly once.
+
+-   Space Complexity: 𝑂(𝑛) in the worst-case scenario (e.g., if the tree is completely balanced, the last level could contain up to 𝑛/2 nodes).
