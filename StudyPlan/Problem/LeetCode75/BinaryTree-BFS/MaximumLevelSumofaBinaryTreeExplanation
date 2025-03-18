@@ -1,0 +1,26 @@
+Explanation
+
+-   Main Idea:
+
+    -   We perform a Breadth-First Search (BFS) (level-order traversal) to compute the sum of node values at each level.
+    -   Track the level with the maximum sum.
+
+-   Step-by-Step Approach:
+
+-   Initialize a Queue:
+    -   Start with the root node in the queue.
+    -   Iterate Level by Level:
+    -   For each level, determine the number of nodes (levelSize) and compute the total sum of that level.
+
+-   Update Maximum Sum:
+    -   If the current level’s sum exceeds the maximum sum recorded so far, update the maximum sum and record the current level.
+
+-   Enqueue Children:
+    -   Add the left and right children of each node to the queue for processing the next level.
+
+-   Return Result:
+    -   After processing all levels, return the level number with the highest sum.
+
+-   Time Complexity:𝑂(𝑛), where 𝑛 is the number of nodes, since we visit each node once.
+
+-   Space Complexity: 𝑂(𝑛) in the worst-case scenario, when the tree has a level with a large number of nodes.
