@@ -1,0 +1,22 @@
+Explanation
+
+-   Main Idea:
+
+    -   Use the Binary Search Tree (BST) properties to efficiently locate the node whose value equals val.
+
+-   Step-by-Step Approach:
+
+    -   Iterate through the tree:
+        -   While the current node is not null, check if its value is equal to val.
+
+-   Comparison:
+    -   If val is less than the current node's value, move to the left subtree.
+    -   If val is greater than the current node's value, move to the right subtree.
+
+-   Return:
+    -   If a node with val is found, return that node (which serves as the root of its subtree).
+    -   If no such node exists, return null.
+
+-   Time Complexity: 𝑂(ℎ), where ℎ is the height of the tree (worst-case 𝑂(𝑛) for a skewed tree, 𝑂(log𝑛) for a balanced tree).
+
+-   Space Complexity: 𝑂(1) for the iterative solution.
