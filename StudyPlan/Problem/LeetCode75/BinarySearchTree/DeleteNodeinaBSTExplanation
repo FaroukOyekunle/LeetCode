@@ -1,0 +1,28 @@
+Explanation
+Main Idea:
+-   The goal is to delete a node with a given key from a Binary Search Tree (BST) while maintaining the BST properties.
+
+-   Step-by-Step Approach:
+
+-   Search for the Node:
+
+    -   Traverse the tree:
+        -   If key is less than root.val, search in the left subtree.
+        -   If key is greater than root.val, search in the right subtree.
+        -   If key equals root.val, then we have found the node to be deleted.
+
+    -   Delete the Node:
+        -   Node with One Child or No Child:
+        -   If the node has no left child, return its right child.
+        -   If the node has no right child, return its left child.
+
+    -   Node with Two Children:
+        -   Find the inorder successor (smallest node in the right subtree).
+        -   Replace the node's value with the successor's value.
+        -   Recursively delete the successor node from the right subtree.
+
+    -   Return the Updated Tree:
+        -   After deletion, return the root of the updated tree.
+
+-   Time Complexity: 𝑂(ℎ), where ℎ is the height of the tree. This meets the requirement of 𝑂(height of tree). 
+-   Space Complexity: 𝑂(ℎ) due to recursive call stack in the worst-case scenario.
