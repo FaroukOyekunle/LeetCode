@@ -1,0 +1,42 @@
+Explanation
+
+-   Main Idea:
+
+    -   The goal is to count the number of provinces (connected components) in the graph represented by the isConnected matrix.
+
+    -   Two cities belong to the same province if they are directly or indirectly connected.
+
+-   Step-by-Step Approach:
+
+-   Initialization:
+
+    -   Create a boolean array visited to keep track of which cities have been explored.
+
+    -   Initialize a counter provinces to 0.
+
+    -   Traverse the Cities:
+
+    -   Loop through each city.
+
+    -   If a city is not visited, it indicates the start of a new province.
+
+    -   Increment provinces.
+
+    -   Perform a Depth-First Search (DFS) starting from this city to mark all cities in this province as visited.
+
+-   DFS Traversal:
+
+    -   In the DFS function, mark the current city as visited.
+
+    -   For every other city, if it is directly connected to the current city and not yet visited, recursively perform DFS on that city.
+
+    -   Return the Count:
+
+    -   After processing all cities, the provinces counter reflects the total number of connected components (provinces).
+
+
+-   Complexity Analysis:
+
+-   Time Complexity: 𝑂(𝑛2) since the algorithm processes each cell in the n x n matrix.
+
+-   Space Complexity: 𝑂(𝑛) for the visited array and recursion stack in the worst case.
