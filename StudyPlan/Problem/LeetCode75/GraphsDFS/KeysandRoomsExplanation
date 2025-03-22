@@ -1,0 +1,23 @@
+Explanation
+
+-   Main Idea:
+
+    -   Model the rooms as nodes in a graph, where obtaining a key from a room allows you to visit the corresponding room.
+    -   Use a BFS (Breadth-First Search) to traverse the graph starting from room 0.
+
+-   Step-by-Step Approach:
+
+-   Initialization:
+    -   Create a visited array to track which rooms have been accessed.
+    -   Use a queue to perform BFS, starting with room 0.
+
+-   BFS Traversal:
+    -   While the queue is not empty, remove the current room.
+    -   For each key in that room, if the corresponding room hasn't been visited, mark it as visited and enqueue it.
+
+-   Final Check:
+    -   After BFS, check if every room is marked as visited.
+    -   Return true if all rooms are visited; otherwise, return false.
+
+-   Time Complexity: 𝑂(𝑉+𝐸), where 𝑉 is the number of rooms and 𝐸 is the total number of keys.
+-   Space Complexity: 𝑂(𝑉), for storing the visited array and the queue.
