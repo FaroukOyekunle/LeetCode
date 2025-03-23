@@ -1,0 +1,24 @@
+Explanation
+
+-   Graph Construction
+
+    -   We create an adjacency list where each edge has a direction indicator:
+
+    -   (v, 1) if the road is directed away from 0 (needs reversal).
+
+    -   (u, 0) if the road is directed toward 0 (already correct).
+
+-   DFS Traversal
+
+    -   Start DFS from city 0, marking nodes as visited.
+
+    -   If an edge needs reordering (1), count it and continue DFS.
+
+    -   Return the number of changes required to make all paths lead to city 0.
+
+
+-   Complexity Analysis
+
+-   Time Complexity: 𝑂(𝑛) since we process n - 1 edges in a single DFS traversal.
+
+-   Space Complexity: 𝑂(𝑛) due to adjacency list storage and recursion stack.
