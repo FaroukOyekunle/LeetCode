@@ -1,0 +1,46 @@
+Explanation
+
+Main Idea:
+
+-   Model the given equations as a weighted directed graph, where each variable is a node.
+
+-   For an equation "a / b = value", add an edge from a to b with weight value and an edge from b to a with weight 1 / value.
+
+Step-by-Step Approach:
+
+-   Graph Construction:
+
+    -   Create an adjacency list (Dictionary<string, List<(string, double)>>) to store each variable's neighbors and the corresponding edge weights.
+
+    -   Loop over the equations, adding both directional edges for each equation.
+
+-   DFS Traversal for Each Query:
+
+    -   For each query [src, dest], use Depth-First Search (DFS) to find a path from src to dest.
+
+    -   Maintain an accumulated product (accum) of edge weights along the current path.
+
+    -   If src equals dest, return the accumulated product.
+
+    -   Use a HashSet to keep track of visited nodes to avoid cycles.
+
+    -   If no path is found, return -1.0.
+
+-   Answering Queries:
+
+    -   For each query, if either the source or destination variable is not present in the graph, return -1.0.
+
+    -   Otherwise, the DFS traversal computes the result.
+
+Complexity Analysis:
+
+-   Time Complexity:
+
+    -   Building the graph takes 𝑂(𝐸), where 𝐸 is the number of equations.
+    -   For each query, the DFS traversal in the worst-case may visit every node, which is 𝑂(𝑉), where 𝑉 is the number of variables.
+    -   Overall, the worst-case time complexity is 𝑂(𝐸+𝑄×𝑉), which is efficient given the small constraints (up to 20 equations and 20 queries).
+
+-   Space Complexity:
+
+    -   The graph uses 𝑂(𝑉+𝐸) space.
+    -   DFS recursion uses 𝑂(𝑉) space in the worst case.
