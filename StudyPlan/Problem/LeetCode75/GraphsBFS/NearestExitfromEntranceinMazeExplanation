@@ -1,0 +1,39 @@
+Explanation
+
+-   Main Idea:
+
+-   Use Breadth-First Search (BFS) to explore the maze starting from the entrance and find the nearest exit.
+
+-   Step-by-Step Approach:
+
+-   Initialization:
+
+    -   Determine the dimensions (m and n) of the maze.
+
+    -   Enqueue the entrance cell (startR, startC) with 0 steps.
+
+    -   Mark the entrance as visited.
+
+-   BFS Traversal:
+
+    -   For each cell dequeued, check if it is an exit:
+
+    -   An exit is an empty cell ('.') that is at the border (i.e., row 0, m-1 or column 0, n-1).
+
+    -   Note: The entrance cell is not considered an exit, so only consider cells with steps > 0.
+
+    -   For each cell, enqueue its valid neighbors (cells within bounds, not walls ('+'), and not visited) and mark them as visited.
+
+    -   Increment the steps for each move.
+
+-   Result:
+
+    -   Return the number of steps when the first exit is found.
+
+    -   If no exit is found after processing all cells, return -1.
+
+Complexity Analysis:
+
+    -   Time Complexity: 𝑂(𝑚×𝑛) since each cell is processed at most once.
+
+    -   Space Complexity: 𝑂(𝑚×𝑛) due to the BFS queue and the visited matrix.
