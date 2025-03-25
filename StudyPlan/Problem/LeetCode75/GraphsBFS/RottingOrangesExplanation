@@ -1,0 +1,29 @@
+Explanation
+
+Step 1: Initialize the queue with all rotten oranges
+    -   We iterate through the grid, enqueueing all initially rotten oranges (2) and counting the fresh oranges (1).
+
+    -   If no fresh oranges exist initially, return 0.
+
+Step 2: Perform BFS to spread the rot
+    -   We use BFS because the problem requires a shortest-path type of traversal.
+
+    -   Each level of the BFS represents one minute.
+
+    -   For each rotten orange, we check its four adjacent cells:
+
+        -   If any cell contains a fresh orange (1), it becomes rotten (2), is added to the queue, and the fresh orange count decreases.
+
+Step 3: Return the result
+    -   If all fresh oranges are rotten at the end of BFS, return minutes.
+
+    -   If there are still fresh oranges left, return -1 (some oranges were unreachable).
+
+Complexity Analysis
+-   Time Complexity: 𝑂(𝑚×𝑛)
+
+    -   Each cell is processed at most once.
+
+-   Space Complexity: 𝑂(𝑚×𝑛)
+
+    -   In the worst case, all oranges are rotten and stored in the queue.
