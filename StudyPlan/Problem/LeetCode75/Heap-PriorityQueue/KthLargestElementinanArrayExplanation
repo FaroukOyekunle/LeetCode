@@ -1,0 +1,30 @@
+Explanation
+-   Main Idea:
+
+    -   We use the QuickSelect algorithm to find the kth largest element without sorting the entire array.
+
+    -   Since the kth largest element is the (nums.Length - k)th smallest element in an ascending order, we compute the target index as nums.Length - k.
+
+-   Step-by-Step Approach:
+
+    -   Target Calculation:
+
+        -   Compute the target index: target = nums.Length - k.
+
+    -   QuickSelect Implementation:
+
+        -   Partition: Partition the array around a pivot (chosen as the rightmost element).
+
+        -   Recursion: If the pivot index equals the target, we found the kth largest element. Otherwise, recursively search in the appropriate half of the array.
+
+    -   Return Result:
+
+        -   Once the target index is found, return the corresponding element.
+
+-   Time Complexity:
+
+    -   Average-case: 𝑂(𝑛)
+
+    -   Worst-case: 𝑂(𝑛2) (rare, can be mitigated with random pivot selection if necessary)
+
+-   Space Complexity: 𝑂(1) extra space (in-place partitioning)
