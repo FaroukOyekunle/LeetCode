@@ -1,0 +1,32 @@
+Explanation
+
+-   Main Idea:
+    -   Use a current pointer to track the smallest number not yet popped and a SortedSet to store numbers that are added back (which are less than the current pointer).
+
+-   Step-by-Step Approach:
+
+-   Initialization:
+
+    -   Set current = 1 because the set initially contains all positive integers starting from 1.
+
+    -   Use a SortedSet<int> named addedBack to store numbers that are reinserted via AddBack.
+
+-   PopSmallest Operation:
+
+    -   Check if addedBack is non-empty.
+
+    -   If yes, pop and return the smallest number from it.
+
+    -   Otherwise, return the current pointer's value and increment the pointer.
+
+-   AddBack Operation:
+
+    -   Only add num back if it is less than current (i.e., it was previously popped) and isn't already in addedBack.
+
+-   Time Complexity:
+
+    -   PopSmallest: 𝑂(log𝑘) (if using SortedSet, where 𝑘 is the size of addedBack), but average is 𝑂(1) since 𝑘 is small.
+
+    -   AddBack: 𝑂(log𝑘).
+
+-   Space Complexity: 𝑂(𝑘) where 𝑘 is the number of elements in addedBack.
