@@ -1,0 +1,39 @@
+Explanation
+
+-   Main Idea:
+We want to maximize the score defined as the sum of a chosen subsequence from nums1 multiplied by the minimum element of the corresponding subsequence from nums2.
+By sorting pairs (from nums1 and nums2) by nums2 in descending order, we ensure that as we iterate, the current nums2 value is the smallest among the ones chosen so far. Then we select k elements from nums1 that maximize the sum, using a min-heap to keep track of the current best k values.
+
+-   Step-by-Step Approach:
+
+    -   Pairing & Sorting:
+
+        -   Pair each element from nums1 with its corresponding element from nums2.
+
+        -   Sort these pairs in descending order by the nums2 value.
+
+    -   Greedy Selection Using a Min-Heap:
+
+        -   Iterate over the sorted pairs.
+
+        -   Maintain a min-heap to store the nums1 values from the selected pairs.
+
+        -   Keep a running sum of the values in the heap.
+
+        -   If the heap size exceeds k, remove the smallest element to maximize the sum.
+
+    -   Calculate the Score:
+
+        -   When the heap size is exactly k, the current nums2 value (from the current pair) is the minimum for the selected subsequence.
+
+        -   Compute the candidate score as (sum of heap elements) * (current nums2 value) and update the answer.
+
+    -   Return the Maximum Score:
+
+        -   The maximum score computed during the iteration is returned.
+
+-   Complexity:
+
+    -   Time Complexity: 𝑂(𝑛log𝑛) due to sorting and 𝑂(𝑛log𝑘) for heap operations.
+
+    -   Space Complexity: 𝑂(𝑛) for storing pairs and the heap.
