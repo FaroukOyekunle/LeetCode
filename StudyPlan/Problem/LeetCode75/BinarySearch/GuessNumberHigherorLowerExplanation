@@ -1,0 +1,30 @@
+Explanation
+
+-   Main Idea:
+    -   We use a binary search algorithm to efficiently narrow down the number that was picked.
+
+-   Step-by-Step Approach:
+
+    -   Initialize Pointers:
+
+        -   left is set to 1, and right is set to n.
+
+    -   Binary Search Loop:
+
+        -   Calculate the middle point mid.
+
+        -   Call the API guess(mid):
+
+        -   If it returns 0, mid is the picked number.
+
+        -   If it returns -1, the picked number is lower than mid, so adjust right.
+
+        -   If it returns 1, the picked number is higher than mid, so adjust left.
+
+    -   Termination:
+
+    -   The loop continues until left exceeds right, at which point the correct number has been found.
+
+-   Time Complexity: 𝑂(log𝑛) since the search space is halved on each iteration.
+
+-   Space Complexity: 𝑂(1), as only a few variables are used.
