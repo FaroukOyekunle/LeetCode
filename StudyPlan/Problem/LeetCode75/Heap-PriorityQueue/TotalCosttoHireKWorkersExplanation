@@ -1,0 +1,49 @@
+Explanation
+
+-   Main Idea:
+
+    -   We need to hire k workers with the minimum total cost. In each hiring session, we choose the worker with the smallest cost from either the first candidates workers (from the left) or the last candidates workers (from the right) of the remaining list.
+
+    -   We simulate this process using two priority queues (min-heaps).
+
+-   Step-by-Step Approach:
+    -   Initialize Two Pointers and Heaps:
+
+    -   Use two pointers: left starting at index 0 and right starting at index n-1.
+
+-   Create two min-heaps:
+
+    -   Left Heap: Contains candidates from the beginning.
+
+    -   Right Heap: Contains candidates from the end.
+
+    -   Add the first candidates elements (if available) from the left into leftPQ and the last candidates elements from the right into rightPQ.
+
+-   Hire k Workers (Sessions):
+
+    -   For each hiring session, compare the top elements of both heaps:
+
+    -   If both heaps have candidates:
+
+    -   Pick the candidate with the lower cost.
+
+    -   In case of a tie, since we use lexicographical order (cost, index), the left candidate (with a smaller index) is chosen.
+
+    -   If only one heap has candidates:
+
+    -   Pick the candidate from that heap.
+
+    -   After choosing a candidate, add the cost to the total cost.
+
+    -   Then, if there are still workers available (i.e., if left <= right), add the next candidate from the corresponding side to the heap.
+
+-   Return Total Cost:
+
+    -   After k sessions, return the accumulated total cost.
+
+Complexity Analysis:
+
+-   Time Complexity: Adding and removing from a priority queue takes 𝑂(log(candidates)), and we perform this operation 𝑘 times. The overall complexity is 𝑂(𝑘log(candidates)) plus the initial candidate addition 𝑂(candidates), which is efficient given the constraints.
+
+- Space Complexity: 𝑂(candidates) for each heap, plus 𝑂(1) additional space.
+
