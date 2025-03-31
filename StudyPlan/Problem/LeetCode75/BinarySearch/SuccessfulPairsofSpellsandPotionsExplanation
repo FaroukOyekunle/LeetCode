@@ -1,0 +1,38 @@
+Explanation
+-   Main Idea:
+For each spell, compute the minimum potion strength required such that the product of the spell and the potion is at least success. 
+Then, use binary search on a sorted potions array to quickly count how many potions meet this requirement.
+
+-   Step-by-Step Approach:
+
+    -   Sort the Potions:
+
+        -   Sort the potions array in ascending order to enable efficient binary search.
+
+    -   Compute Required Potion Strength for Each Spell:
+
+        -   For each spell, the required potion strength p must satisfy:
+            spell ×  𝑝 ≥ success
+
+        -   Using ceiling division, we compute:
+            required =⌈success/spell⌉= success+spell−1/spell
+
+    -   Binary Search:
+
+        -   Use Array.BinarySearch to find the first potion with a value greater than or equal to required.
+
+        -   If not found, the binary search returns the bitwise complement of the index at which it would be inserted.
+
+    -   Count Valid Potions:
+
+        -   The number of valid potions is: m - index (where m is the length of the potions array).
+
+    -   Store the Result:
+
+        -   Store this count in the result array for the current spell.
+
+-   Complexity Analysis:
+
+    -   Time Complexity: 𝑂(𝑛log𝑚) where 𝑛 is the length of spells and 𝑚m is the length of potions (due to sorting and binary search for each spell).
+
+    -   Space Complexity: 𝑂(1) extra space (excluding output).
