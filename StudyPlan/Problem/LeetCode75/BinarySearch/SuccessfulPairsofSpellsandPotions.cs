@@ -4,7 +4,6 @@ namespace StudyPlan.Problem.LeetCode75.BinarySearch
     {
         public int[] SuccessfulPairs(int[] spells, int[] potions, long success) 
         {
-    
             Array.Sort(potions);  
             int m = potions.Length;
             int n = spells.Length;
