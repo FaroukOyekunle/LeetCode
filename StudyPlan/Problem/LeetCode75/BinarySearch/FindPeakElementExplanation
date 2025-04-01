@@ -1,0 +1,36 @@
+Explanation
+
+-   Main Idea:
+
+    -   We use a binary search to find a peak element in the array in O(log n) time.
+
+    -   A peak element is one that is greater than its neighbors.
+
+-   Step-by-Step Approach:
+
+    -   Initialize Pointers:
+
+        -   Set low to 0 and high to the last index (nums.Length - 1).
+
+    -   Binary Search Loop:
+
+        -   Calculate mid as the average of low and high.
+
+        -   Compare nums[mid] with its right neighbor (nums[mid + 1]).
+
+            -   If nums[mid] > nums[mid + 1], then a peak must exist in the left half (including mid), so set high = mid.
+
+            -   Otherwise, the peak must be in the right half, so set low = mid + 1.
+
+    -   Return the Peak:
+
+        -   When low equals high, we've found a peak, and we return low.
+
+-   Time Complexity:
+
+    -   O(log n), since each iteration halves the search space.
+
+-   Space Complexity:
+
+    -   O(1), as we use only a few variables.
+
