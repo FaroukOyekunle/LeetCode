@@ -1,0 +1,35 @@
+Explanation
+
+-   Main Idea:
+
+    -   Use binary search to find the minimum eating speed k such that Koko can finish all banana piles within h hours.
+
+-   Step-by-Step Approach:
+
+    -   Set Search Range:
+
+        -   Lower bound (left) is 1 (minimum possible speed).
+
+        -   Upper bound (right) is the maximum value in piles (worst-case scenario).
+
+    -   Binary Search:
+
+        -   For each candidate speed mid, compute the total hours needed by summing the hours required for each pile.
+
+        -   The hours required for a pile is calculated by ceiling division: (𝑝𝑖𝑙𝑒 + 𝑚𝑖𝑑 − 1) / 𝑚𝑖𝑑.
+
+    -   Adjust Search Boundaries:
+
+        -   If the total hours are less than or equal to h, try a smaller speed by setting right = mid.
+
+        -   Otherwise, if more hours are needed, increase the speed by setting left = mid + 1.
+
+    -   Return Result:
+
+        -   When the binary search terminates, left will be the minimum speed at which Koko can finish the piles in time.
+
+-   Complexity Analysis:
+
+    -   Time Complexity: 𝑂(𝑛log(max(piles))), where 𝑛 is the number of piles.
+
+    -   Space Complexity: 𝑂(1), using only a few extra variables.
