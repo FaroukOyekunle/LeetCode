@@ -1,0 +1,23 @@
+Explanation:
+
+-   Two-Pointer Approach:
+
+-   Pointers Initialization:
+    -   left starts at the beginning (index 0) and right starts at the end (last index) of the array.
+
+-   Loop Process:
+    -   Current Area Calculation:
+        -   The container's height is determined by the shorter of the two lines (Math.Min(height[left], height[right])).
+        -   The width is the distance between the two pointers (right - left).
+        -   The area is computed as the product of the height and width.
+
+-   Update Maximum Area:
+    -   If the calculated area is greater than the current maxArea, update maxArea.
+
+-   Pointer Movement:
+    -   The pointer corresponding to the shorter line is moved inward.
+    -   This is because the area is limited by the shorter line, so moving it might increase the height and potentially yield a larger area.
+
+-   Termination:
+    -   The loop continues until the two pointers meet.
+    -   The maximum area encountered is returned as the result.
