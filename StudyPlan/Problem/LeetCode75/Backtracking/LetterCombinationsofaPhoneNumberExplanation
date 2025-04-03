@@ -1,0 +1,32 @@
+Explanation
+
+-   Main Idea:
+Use backtracking to generate all possible letter combinations corresponding to the input digits, based on the mapping of digits to letters on a telephone keypad.
+
+-   Step-by-Step Approach:
+
+    -   Edge Case Check:
+
+        -   If the input digits is empty, return an empty list.
+
+    -   Mapping Construction:
+
+        -   Create a dictionary that maps each digit (from '2' to '9') to its corresponding letters.
+
+    -   Backtracking Function:
+
+        -   Use recursion (the Backtrack function) to build letter combinations.
+
+        -   At each recursive call, append a letter corresponding to the current digit and move to the next digit.
+
+        -   When the built string (path) reaches the length of digits, add it to the result.
+
+    -   Return the Result:
+
+        -   After backtracking, return the list of all generated combinations.
+
+-   Time Complexity:
+    -   𝑂(4𝑛 × 𝑛) in the worst case (each digit can map to up to 4 letters, and we build n-length strings).
+
+-   Space Complexity:
+    -   𝑂(𝑛) for the recursion stack and temporary string, plus 𝑂(4𝑛) to store all combinations.
