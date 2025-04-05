@@ -1,0 +1,31 @@
+Explanation
+
+-   Main Idea:
+
+Use an iterative dynamic programming approach to compute the Tribonacci sequence up to index n.
+
+-   Step-by-Step Approach:
+
+    -   Base Cases:
+
+        -   If n is 0, return 0.
+
+        -   If n is 1 or 2, return 1.
+
+    -   Iterative Computation:
+
+        -   Initialize three variables (a, b, c) corresponding to T0, T1, and T2.
+
+        -   For each index i from 3 to n, compute the Tribonacci number as the sum of the previous three numbers.
+
+        -   Update the variables for the next iteration.
+
+    -   Return Result:
+
+        -   After the loop, d holds the value of Tn.
+
+-   Complexity:
+
+    -   Time Complexity: O(n), iterating once from 3 to n.
+
+    -   Space Complexity: O(1), using only a few variables.
