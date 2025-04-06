@@ -1,0 +1,28 @@
+Explanation
+
+Main Idea:
+
+We use dynamic programming (DP) to compute the minimum cost required to reach each step, and ultimately the top of the staircase.
+
+Step-by-Step Approach:
+
+    -   DP Array Initialization:
+
+        -   Create an array dp of size n + 1 where dp[i] represents the minimum cost to reach step i.
+
+        -   Set dp[0] = 0 and dp[1] = 0 because you can start at step 0 or step 1 for free.
+
+    -   DP Transition:
+
+        -   For each step i from 2 to n (where n is the top of the floor), the cost to reach step i is: 𝑑𝑝[𝑖] = min(𝑑𝑝[𝑖−1] + cost[𝑖 − 1], 𝑑𝑝[𝑖 − 2] + cost[𝑖 − 2])
+        -   This formula represents that from step i-1 you can climb one step or from step i-2 you can climb two steps.
+
+    -   Return the Result:
+
+        -   The answer is dp[n], the minimum cost to reach the top.
+
+Complexity:
+
+    -   Time Complexity: 𝑂(𝑛), as we process each step once.
+
+    -   Space Complexity: 𝑂(𝑛) for the dp array.
