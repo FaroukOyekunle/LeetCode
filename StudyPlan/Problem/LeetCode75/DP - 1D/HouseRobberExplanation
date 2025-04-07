@@ -1,0 +1,37 @@
+Explanation
+
+-   Main Idea:
+
+    Use dynamic programming to decide whether to rob a house or skip it, ensuring that no two adjacent houses are robbed.
+
+-   Step-by-Step Approach:
+
+    -   Edge Cases:
+
+        -   If there is only one house, rob that house.
+
+    -   DP Initialization:
+
+        -   dp[0] is set to nums[0] (only one house to rob).
+
+        -   dp[1] is the maximum of nums[0] and nums[1] (choose the best of the first two houses).
+
+    -   DP Transition:
+
+        -   For each house i (from 2 to n - 1), you have two options:
+
+            -   Skip House i: Keep the maximum money robbed up to house i-1 (i.e., dp[i-1]).
+
+            -   Rob House i: Add the money from house i to the maximum robbed up to house i-2 (i.e., dp[i-2] + nums[i]).
+
+        -   Choose the option that gives the maximum total.
+
+    -   Result:
+
+        -   dp[n - 1] holds the maximum money that can be robbed.
+
+-   Complexity:
+
+    -   Time Complexity: O(n) – Each house is processed once.
+
+    -   Space Complexity: O(n) – The DP array of size n is used.
