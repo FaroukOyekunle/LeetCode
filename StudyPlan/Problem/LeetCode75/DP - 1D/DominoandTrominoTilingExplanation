@@ -1,0 +1,40 @@
+Explanation
+
+-   States
+
+    -   dp[i]: Ways to fully tile a 2 x i board.
+
+    -   dp2[i]: Ways to tile a 2 x i board with exactly one cell missing in the last column (either top or bottom).
+
+-   Transitions
+
+    -   dp2[i]
+
+        -   You can get a single-missing-column configuration by adding a horizontal domino to a full 2 x (i-2) board, 
+            or by extending a previous single-missing with a vertical domino:
+            𝑑𝑝2[𝑖] = 𝑑𝑝[𝑖 − 2] + 𝑑𝑝2[𝑖 − 1]
+    
+    -   dp[i]
+
+        -   Fully tile by:
+
+            -   Adding a vertical domino to a full 2 x (i-1) board.
+
+            -   Adding two horizontal dominoes to a full 2 x (i-2) board.
+
+            -   Filling in a missing cell from dp2[i-1] with a tromino (2 orientations):
+            𝑑𝑝[𝑖] = 𝑑𝑝[𝑖 − 1] + 𝑑𝑝[𝑖 − 2] + 2 × 𝑑𝑝2[𝑖 − 1]
+
+-   Base Cases
+
+    -   dp[0] = 1, empty board.
+
+    -   dp[1] = 1, only one vertical domino.
+
+    -   dp2[0] = dp2[1] = 0, cannot have a missing cell on such small boards.
+
+-   Complexity
+
+    -   Time: 𝑂(𝑛)
+
+    -   Space: 𝑂(𝑛)
