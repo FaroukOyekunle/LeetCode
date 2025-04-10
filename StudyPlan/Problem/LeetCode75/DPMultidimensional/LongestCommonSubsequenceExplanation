@@ -1,0 +1,25 @@
+Explanation
+-   DP Definition
+    Let dp[i,j] be the length of the longest common subsequence of text1[0..i-1] and text2[0..j-1].
+
+-   Transition
+
+    -   If the current characters match (text1[i-1] == text2[j-1]), then
+
+        dp[i,j] = dp[i-1, j-1] + 1
+    -   Otherwise, we take the best of skipping one character in either string:
+
+
+        dp[i,j] = max(dp[i-1, j], dp[i, j-1])
+
+-   Initialization
+    All dp[0,*] and dp[* ,0] are 0 because an empty string has LCS length 0 with anything.
+
+-   Answer
+dp[m,n] holds the LCS length for the full strings.
+
+Complexity
+    -   Time: O(m·n), where m = text1.Length, n = text2.Length.
+
+    -   Space: O(m·n) for the DP table.
+
