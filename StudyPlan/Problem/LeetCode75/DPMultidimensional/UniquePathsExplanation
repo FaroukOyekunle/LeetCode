@@ -1,0 +1,31 @@
+Explanation
+-   Main Idea:
+    Use dynamic programming with a single 1D array dp of length n.
+
+        -   dp[j] holds the number of unique paths to reach the current row's column j.
+
+-   Initialization:
+
+    -   For the first row (i = 0), there's exactly one way to reach any cell: move right repeatedly. Hence, dp[j] = 1 for all j.
+
+-   Transition:
+
+    -   For each subsequent row i (from 1 to m-1):
+
+    -   dp[0] stays 1 (only one way: move down all the way).
+
+    -   For j from 1 to n-1:
+
+    dp[j] = dp[j] (ways from above) + dp[j-1] (ways from left)
+    -   We update dp[j] in place because the old dp[j] is from the previous row (above), and dp[j-1] is from the current row (left).
+
+-   Result:
+
+    -   After filling in all m rows, dp[n-1] is the number of ways to reach the bottom-right corner (m-1, n-1).
+
+-   Complexity:
+
+    -   Time: 𝑂(𝑚 × 𝑛)
+
+    -   Space: 𝑂(𝑛)
+
