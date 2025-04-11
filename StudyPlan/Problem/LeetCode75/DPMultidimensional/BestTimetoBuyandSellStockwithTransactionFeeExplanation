@@ -1,0 +1,25 @@
+Explanation
+-   We maintain two variables per day:
+
+    -   cash: Maximum profit so far if not holding a share.
+
+    -   hold: Maximum profit so far if holding a share.
+
+-   Initialization
+
+    -   cash = 0 (no profit, no share)
+
+    -   hold = -prices[0] (we bought on day 0)
+
+-   Transition for day i:
+
+    -   Sell (move from hold→cash):
+    -   cash = max(prevCash, prevHold + prices[i] - fee)
+
+    -   Buy (move from cash→hold):
+    -   hold = max(prevHold, prevCash - prices[i])
+
+    -   The transaction fee is subtracted only once on selling.
+
+Answer
+At the end of day n-1, the maximum profit with no share in hand is cash.
