@@ -1,0 +1,20 @@
+Explanation of the solution:
+
+-   DP relation
+    -   For any integer i > 0, consider its binary form. Shifting right by one bit (i >> 1) effectively divides i by 2, discarding the least significant bit (LSB). 
+    -   The LSB itself is i & 1, which is 1 if i is odd, 0 if i is even. Hence:
+
+    popcount(i) = popcount(i >> 1) + (i & 1)
+    -   We store all previously computed popcounts in an array, so each new popcount(i) is just one lookup plus one addition.
+
+-   Initialization
+
+    -   ans[0] = 0 since zero has no 1’s in its binary representation.
+
+-   Single pass
+
+    -   For i from 1 to n, compute ans[i] in O(1) time using the above relation. This yields an overall O(n) algorithm.
+
+-   Space usage
+
+    -   We use an array ans of length n+1 to store the result for every integer in [0..n], so space is O(n).
