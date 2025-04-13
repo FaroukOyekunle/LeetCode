@@ -1,0 +1,31 @@
+Detailed Explanation
+
+-   DP Definition
+    -   dp[i,j] = the minimum number of edit operations (insert, delete, replace) to transform the prefix word1[0..i-1] into word2[0..j-1].
+
+-   Initialization
+
+    -   dp[0,j] = j because transforming an empty string into a length‑j string requires j insertions.
+
+    -   dp[i,0] = i because transforming a length‑i string into empty requires i deletions.
+
+-   Recurrence
+
+    -   If the current characters match (word1[i-1] == word2[j-1]), no new operation is needed:
+
+            dp[i,j] = dp[i-1, j-1]
+    -   Otherwise, we consider the three operations:
+
+    -   Insert word2[j-1] into word1[0..i-1], matching that character →
+    -   dp[i, j-1] + 1
+
+    Delete word1[i-1] →
+    dp[i-1, j] + 1
+
+    -   Replace word1[i-1] with word2[j-1] →
+    dp[i-1, j-1] + 1
+
+-   Take the minimum of these three.
+
+-   Answer
+dp[m, n] gives the edit distance from word1 to word2.
