@@ -1,0 +1,29 @@
+Explanation
+
+-   Key Observation
+
+    -   The bitwise XOR (^) operation has two crucial properties:
+
+        -   Self‐canceling: a ^ a = 0
+
+        -   Zero‐identity: a ^ 0 = a
+
+    -   Since every number except one appears exactly twice, when we XOR all elements:
+
+    (…((0  ⊕   𝑎1)  ⊕  𝑎1)  ⊕  𝑎2)  ⊕  𝑎2  …
+    all pairs cancel out to zero, leaving only the single, unpaired value.
+
+-   Algorithm
+
+    -   Initialize an accumulator result = 0.
+
+    -   Loop through each x in nums, update result ^= x.
+
+    -   After the loop, result holds the one element that did not cancel out.
+
+-   Complexity
+
+    -   Time: O(n), a single pass through the array.
+
+    -   Space: O(1), only one extra integer.
+
