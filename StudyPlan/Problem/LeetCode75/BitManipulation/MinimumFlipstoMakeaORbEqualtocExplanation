@@ -1,0 +1,36 @@
+Solution Explanation
+
+We need to make sure that after flipping bits in a and/or b, we have:
+
+(a OR b) == c
+
+We can look at each bit position independently (from bit 0 up to, say, bit 31 since inputs ≤ 10^9).
+
+For each bit position i:
+
+    -   Extract the i‑th bit of a, b, and c:
+
+    int abit = (a >> i) & 1;
+    int bbit = (b >> i) & 1;
+    int cbit = (c >> i) & 1;
+
+
+-   We want (abit OR bbit) to equal cbit.
+
+    -   Case A: cbit == 1
+
+    -   If either abit or bbit is already 1, then abit OR bbit == 1—no flips needed.
+
+    -   Otherwise (abit == 0 and bbit == 0), we must flip one of them to 1. → +1 flip.
+
+    -   Case B: cbit == 0
+
+        -   We need abit == 0 and bbit == 0. So if abit == 1, we must flip that bit → +1 flip. Similarly, if bbit == 1, that’s another flip → +1 flip.
+
+Summing these over all bit positions gives the minimum total flips.
+
+Time Complexity:
+We iterate over a fixed 32 bits → O(1) (practically constant).
+
+Space Complexity:
+O(1) extra space.
