@@ -1,0 +1,21 @@
+Explanation
+
+    -   We implement a standard 26‑way Trie node:
+
+    -   Each node has an array children[26] for each lowercase letter.
+
+    -   A boolean isWord marks whether a complete word ends at that node.
+
+-   Operations:
+
+    -   Insert
+        -   Walk down from the root for each character. If the child is null, create it. At the end, mark isWord = true.
+
+    -   Search
+        -   Walk down for each character. If at any point the child is null, return false. After the loop, return the final node’s isWord.
+
+    -   StartsWith
+        -   Same as search, but we don’t care about isWord at the end—only that we never encountered a null child.
+
+-   All operations run in 𝑂(𝐿) time where 𝐿
+    -   L is the length of the word or prefix.
