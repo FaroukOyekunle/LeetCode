@@ -1,0 +1,50 @@
+Explanation
+
+        -   We want to, after typing each character of searchWord, suggest up to three products from products that share the current prefix, in lexicographical order. To do this efficiently:
+
+    -   Preprocessing (Sort the products)
+
+        -   Sort products in ascending lexicographical order.
+
+        -   This way, any contiguous block of matching prefixes will itself be lexicographically ordered.
+
+    -   Typing each character
+
+        -   Maintain a running prefix string.
+
+        -   Each time we add one more character, we need to find all products that start with that updated prefix.
+
+        -   Finding the start of matches with binary search
+
+        -   Use a custom lower‑bound (first index where products[i] ≥ prefix lexicographically) via binary search.
+
+        -   Call that index idx. Any product before idx is strictly less than the prefix and cannot match.
+
+    -   Collect up to three suggestions
+
+        -   Starting at products[idx], check at most the next three entries (or until we run out of array).
+
+       -   For each, verify StartsWith(prefix). Stop scanning as soon as one doesn’t match, since the array is sorted.
+
+    -   Repeat for each prefix
+
+        -   Append the list of up to three suggestions to our result.
+
+        -   Continue until we’ve processed every character of searchWord.
+
+    -   Time Complexity
+
+        -   Sorting: 𝑂(𝑁log𝑁), 𝑁 = products.Length.
+
+            For each of the 𝑊 characters in searchWord:
+
+        -   Binary search: 𝑂(log𝑁).
+
+        -   Scanning up to 3 items: 𝑂(1).
+
+        -   Total: 𝑂(𝑁log𝑁 + 𝑊log𝑁).
+
+    -   Space Complexity
+
+        -   Apart from the output lists, we use 𝑂(1) extra space.
+
