@@ -1,0 +1,16 @@
+Steps:
+    -   Sort the intervals by their end time (ascending).
+
+-   Initialize:
+
+    -   count = 0 (number of intervals to remove)
+
+    -   prevEnd = int.MinValue (end time of last non-overlapping interval)
+
+    -   Iterate through each interval:
+
+    -   If start >= prevEnd, it's non-overlapping → update prevEnd
+
+    -   Else, it's overlapping → increment count
+
+Return count
