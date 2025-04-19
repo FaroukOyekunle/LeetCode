@@ -1,0 +1,22 @@
+Explanation
+
+-   Sort by right endpoint
+    -   We first sort all intervals ([xstart, xend]) in ascending order of xend. This way, the balloon that closes earliest is considered first.
+
+-   Greedy placement of arrows
+
+    -   We shoot our first arrow at currentEnd = points[0].xend.
+
+    -   Then we scan the rest of the balloons in order.
+
+    -   If the next balloon’s start (points[i].xstart) is > currentEnd, this balloon cannot be burst by our existing arrow, so we must shoot a new arrow at its xend. We increment our arrow count and update currentEnd.
+
+    -   Otherwise (xstart <= currentEnd), that balloon is already burst by the arrow at currentEnd, and we move on without adding another arrow.
+
+-   Why it’s optimal
+    -   By always placing an arrow at the current interval’s end, we maximize its chance of bursting as many subsequent overlapping balloons as possible. Sorting by end and taking the earliest closing balloon guarantees we never “waste” coverage that could have been used on another overlapping interval.
+
+-   Complexity
+    -   Time: O(n log n) due to sorting, where n = points.Length.
+
+    -   Space: O(1) extra (aside from the input array and recursion/stack for sorting).
