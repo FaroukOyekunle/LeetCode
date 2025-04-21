@@ -1,0 +1,34 @@
+Step‑by‑Step Explanation
+
+-   Initialization
+
+    -   Create an output array ans of the same length, initialized to 0.
+
+    -   Initialize an empty stack of integer indices.
+
+-   Single Pass with Monotonic Stack
+
+    -   For each day i from 0 to n-1:
+
+        -   While the stack is nonempty and temperatures[i] > temperatures[stack.Peek()], we have found the next warmer day for stack.Peek():
+
+            -   Pop prevDay = stack.Pop().
+
+            -   Set ans[prevDay] = i - prevDay (the wait time).
+
+        -   Push the current index i onto the stack—its warmer day is still unknown.
+
+-   Post‑processing
+
+    -   Any indices still in the stack never saw a warmer day; their ans entries remain 0 by default, which matches the requirement.
+
+-   Complexity
+
+    -   Time: O(n). Each index is pushed and popped at most once, and each day involves only a constant amount of work besides that.
+
+    -   Space: O(n) for the stack and the answer array.
+
+-   Correctness Intuition
+
+    -   The stack holds a decreasing sequence of temperatures (by their indices). When a warmer temperature arrives, it resolves all previous colder days in one go, ensuring we record the earliest warmer day for each.
+
