@@ -1,0 +1,21 @@
+Explanation
+
+-   Data structure
+    We maintain a stack of pairs (price, span), where span is the number of consecutive days (ending on that day) the price was ≤ that day's price.
+
+-   Processing Next(price)
+
+    -   Start with span = 1 (today itself).
+
+    -   While the stack top has price ≤ today’s price, pop it and add its stored span to our current span.
+
+    -   This effectively “jumps” backward over all days that are covered by that popped span in one go.
+
+    -   Push (today’s price, accumulated span) onto the stack.
+
+    -   Return span.
+
+-   Why is it fast?
+    Each price is pushed and popped at most once, so over n calls total time is O(n), i.e. O(1) amortized per call.
+
+-   Space Complexity: O(n) for the stack in the worst case (strictly decreasing prices).
