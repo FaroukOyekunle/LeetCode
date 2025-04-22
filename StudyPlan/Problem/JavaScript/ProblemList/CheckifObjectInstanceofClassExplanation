@@ -1,0 +1,7 @@
+To solve this, we need to:
+
+1.  Handle edge cases: where obj or classFunction are undefined, null, or not valid objects/functions.
+
+2.  Support primitives like 5 or 'hello', which aren't technically instances (instanceof fails) but still inherit from wrapper constructors like Number, String, etc.
+
+3.  Use a custom prototype chain traversal to match class inheritance.
