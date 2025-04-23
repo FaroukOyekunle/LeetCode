@@ -1,0 +1,9 @@
+✅ Explanation:
+
+this refers to the array instance on which .last() is called.
+
+this.length === 0 checks if the array is empty.
+
+If empty, return -1.
+
+Otherwise, return the last element using this[this.length - 1].
