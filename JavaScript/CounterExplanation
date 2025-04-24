@@ -1,0 +1,12 @@
+✅ Explanation:
+-   createCounter(n) initializes a variable current with the value of n.
+
+-   The returned inner function is a closure, which retains access to current even after createCounter has finished execution.
+
+-   Every time you call the counter(), it:
+
+    1.  Returns the current value.
+
+    2.  Increments current by 1 for the next call.
+
+This mimics the behavior of a persistent counter starting from n.
