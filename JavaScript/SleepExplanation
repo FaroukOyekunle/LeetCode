@@ -1,0 +1,7 @@
+Explanation:
+
+-   setTimeout(resolve, millis) waits for the given number of milliseconds and then resolves the promise.
+
+-   Wrapping it in async allows us to use await sleep(millis) if desired.
+
+-   The function will pause execution for approximately millis milliseconds when awaited or chained with .then().
