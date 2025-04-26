@@ -1,0 +1,22 @@
+✅ Explanation:
+
+-   set(key, value, duration)
+
+    -   If key already exists, clear its old timer and mark existed = true.
+
+    -   Set a new timeoutId that will delete the key after duration milliseconds.
+
+    -   Store { value, timeoutId } in the Map.
+
+-   get(key)
+
+    -   Return the value if key exists, otherwise return -1.
+
+-   count()
+
+    -   Simply return the number of items in the Map (unexpired).
+
+Important Concepts:
+    -   clearTimeout is critical to cancel previous expiration when a key is reset.
+
+    -   Map is used to store each key along with its timeout reference.
