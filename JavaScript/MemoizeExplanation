@@ -1,0 +1,9 @@
+✅ Explanation:
+
+-   const cache = new Map();: to store arguments and results.
+
+-   const key = JSON.stringify(args);: turn args into a unique string so they can be used as a key (e.g., [2, 3] and [3, 2] are different).
+
+-   callCount++: we only increment if actual fn is called (not when serving from cache).
+
+-   memoizedFn.getCallCount(): allows checking how many real function calls have been made.
