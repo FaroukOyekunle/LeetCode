@@ -1,0 +1,23 @@
+✅ Explanation:
+
+The code extends the Array prototype by adding a method snail, which transforms a given 1D array (this) into a 2D array of size rowsCount by colsCount. The numbers from the original array are arranged in a "snail-like" pattern, where:
+
+-   In even-numbered columns (starting from index 0), the elements are filled from top to bottom.
+
+-   In odd-numbered columns, the elements are filled from bottom to top.
+
+Breakdown of the logic:
+
+    1.  Input Validation: The method first checks if the number of rows (rowsCount) multiplied by the number of columns (colsCount) matches the length of the array. If it doesn't, an empty array is returned because the transformation is not possible.
+
+    2.  Initialization of Result Array: An empty 2D array res is created with the specified number of rows and columns. Each element is initially set to 0.
+
+    3. Filling the Result Array:
+
+        -   The for loop iterates over each column (col) from 0 to colsCount - 1.
+
+        -   For even-numbered columns (col % 2 === 0), the values are inserted from top to bottom (i.e., res[row][col] = nums[idx++]).
+
+        -   For odd-numbered columns, the values are inserted from bottom to top (i.e., res[row][col] = nums[idx++]), effectively reversing the order of assignment for those columns.
+
+    4. Return Result: Finally, the transformed 2D array res is returned.
