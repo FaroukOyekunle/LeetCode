@@ -1,0 +1,9 @@
+✅ Explanation:
+
+-   Define a helper function that takes the array and current depth.
+
+-   Traverse each element:
+
+    -   If it's an array and depth is less than n, recursively flatten it, increasing the depth by 1.
+
+    -   Else, push the element as-is to the result.
