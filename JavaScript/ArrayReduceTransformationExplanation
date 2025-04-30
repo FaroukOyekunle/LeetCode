@@ -1,0 +1,11 @@
+✅ Explanation:
+
+-   Start with init as the initial value.
+
+-   Iterate over each element in nums.
+
+-   At each step, apply the function fn to the current accumulated value and the current element.
+
+-   Update the accumulated value (result) with the return value of fn.
+
+-   After the loop, return the final accumulated value.
