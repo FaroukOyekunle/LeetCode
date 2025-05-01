@@ -1,0 +1,9 @@
+✅ Explanation:
+
+-   timeoutId stores the ID of the pending setTimeout call.
+
+-   Every time the returned function is invoked, it clears any existing timeout.
+
+-   A new timeout is set to execute fn(...args) after t milliseconds.
+
+-   If the function is called again within the debounce window (t ms), the previous call is canceled.
