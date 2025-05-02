@@ -1,0 +1,5 @@
+✅ Explanation
+ 
+- reduceRight iterates the functions array from right to left.
+
+-   It starts with the input value x and applies each function to the result of the previous one.
