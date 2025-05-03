@@ -1,0 +1,7 @@
+✅ Explanation
+
+-   We use nested Maps so each set of arguments (by reference) leads to one cached result.
+
+-   We store the actual result under a special key ('__result__') to avoid confusion with function arguments.
+
+-   The function supports arbitrary number and types of arguments (as long as they’re not NaN).
