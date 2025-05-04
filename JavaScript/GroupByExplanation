@@ -1,0 +1,17 @@
+✅ Explanation:
+
+-   I define groupBy on Array.prototype so it works on any array.
+
+-   For each item in the array:
+
+    -   I compute the key using the provided function fn.
+
+    -   If the key doesn't exist in the result object, i initialize it with an empty array.
+
+    -   I push the current item to the corresponding key in the result.
+
+-   The final result is an object where:
+
+    -   Each key is derived from fn(item).
+
+    -   Each value is an array of items that generated that key.
