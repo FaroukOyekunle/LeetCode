@@ -1,0 +1,15 @@
+✅ Explanation:
+
+-   I define a new function filter that mimics the behavior of Array.prototype.filter.
+
+-   fn can take one or two arguments: the element arr[i] and its index i.
+
+-   I initialize an empty array result.
+
+-   I iterate through the input array:
+
+    -   For each element, i call fn with the current element and index.
+
+    -   If the result is truthy, i push the element into result.
+
+-   Return the result array after the loop completes.
