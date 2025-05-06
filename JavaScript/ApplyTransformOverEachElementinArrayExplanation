@@ -1,0 +1,11 @@
+✅ Explanation
+
+-   The map function replicates the built-in Array.map.
+
+-   It initializes an empty array result.
+
+-   It iterates through arr, applying fn to each element and its index.
+
+-   The result of each function call is pushed into the result array.
+
+-   Finally, result is returned.
