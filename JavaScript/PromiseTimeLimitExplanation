@@ -1,0 +1,26 @@
+✅ Explanation
+
+1. Promise wrapper: I return a new function that, when called, returns a Promise which races the original function's execution against a timeout.
+
+2. Timeout: We setTimeout for t ms to call reject("Time Limit Exceeded") if the timer fires first.
+
+3. Capturing fn: I invoke fn(...args) inside a Promise.resolve().then(...) chain:
+
+    -    This ensures that any synchronous exceptions thrown by fn are converted into Promise rejections and handled by the subsequent .catch.
+
+4. Clearing the timer: On both success (.then) and failure (.catch) of fn, we clearTimeout(timer) to prevent a late timeout from firing after we've already settled.
+
+5. Result propagation:
+
+    -   If fn resolves before the timeout, i clear the timer and resolve with its result.
+
+    -   If fn rejects (or throws) before the timeout, we clear the timer and reject with the same error.
+
+    -   If the timeout occurs first, i reject("Time Limit Exceeded") and ignore the eventual outcome of fn.
+
+This meets all the rules:
+
+-   Respects the t ms limit.
+
+-   Propagates both synchronous throws and asynchronous rejections.
+
