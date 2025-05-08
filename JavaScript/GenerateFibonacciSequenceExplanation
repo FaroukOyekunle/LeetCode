@@ -1,0 +1,20 @@
+✅ Explanation
+
+1.  Initialize two variables:
+
+    -   a = 0 (the current Fibonacci number)
+
+    -   b = 1 (the next Fibonacci number)
+
+2.  Infinite loop (while (true)) so the generator never “runs out.” Each call to next() will produce another Fibonacci number.
+
+3.  yield a returns the current number (0, then 1, then 1, 2, 3, …).
+
+4.  Update the pair:
+
+    [a, b] = [b, a + b];
+
+    -   After yielding, a becomes the old b,
+
+    -   b becomes the sum of the old a + b.
+
