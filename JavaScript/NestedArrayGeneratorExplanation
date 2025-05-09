@@ -1,0 +1,9 @@
+✅ Explanation
+
+-   I iterate over each element in the input array:
+
+    -   If the element is an array, we recursively call the generator using yield*, which delegates yielding to the nested generator.
+
+    -   If it is a number, we yield it directly.
+
+-   This achieves in-order traversal without building a new flattened array — each item is processed and yielded on demand.
