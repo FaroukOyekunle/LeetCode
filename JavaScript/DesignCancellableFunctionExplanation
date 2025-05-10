@@ -1,0 +1,28 @@
+✅ Explanation
+
+1. Generator driving
+    I create a new Promise whose executor defines a helper step(method, arg) that calls
+generator[method](arg) – i.e. either next(arg) or throw(arg).
+
+    -   If the generator is done, we resolve the outer promise with result.value.
+
+    -   Otherwise we assume result.value is a promise (per problem statement) and attach .then/.catch handlers.
+
+2. Feeding values back
+
+    -   On a fulfilled promise, if we haven’t yet been cancelled, we call step('next', resolvedValue).
+
+    -   If the promise rejects, we call step('throw', rejectionReason).
+
+3. Cancellation
+    I export a cancel function that merely sets cancelled = true.
+On the very next yielded promise resolution, we detect cancelled === true and instead do step('throw', 'Cancelled').
+
+    That throws the string "Cancelled" into the generator.
+
+    -   If the generator code does not catch that exception, the step call will throw, and our outer promise will be reject('Cancelled').
+
+    -   If the generator code does catch "Cancelled" and then yields or returns further values, the driving loop continues normally and may eventually resolve with whatever value the generator returns.
+
+4. Immediate completion
+    If the generator is already done (e.g. it returns immediately), our first step('next') will see done === true on the very first line and resolve immediately. Any later call to cancel() has no effect.
