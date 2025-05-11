@@ -1,0 +1,28 @@
+✅ Explanation
+
+1. Closure to hold state
+    I capture two variables in the outer scope of our returned object:
+
+    -   init — the initial value (never changes after creation)
+
+    -   current — the mutable counter state, initially set to init
+
+2. increment()
+
+    -   Increases current by 1
+
+    -   Returns the new current value
+
+3. decrement()
+
+    -   Decreases current by 1
+
+    -   Returns the new current value
+
+4. reset()
+
+    -   Restores current back to init
+
+    -   Returns current
+
+Because the returned methods form a closure over current and init, they share and modify the same internal state across calls.
