@@ -1,0 +1,7 @@
+✅ Explanation
+
+-   called starts as false.
+
+-   On the first call, it executes fn and sets called = true, storing the result.
+
+-   On later calls, it skips calling fn and returns undefined.
