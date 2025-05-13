@@ -1,0 +1,4 @@
+✅ Explanation
+-   The outer function createHelloWorld does not take any arguments.
+
+-   It returns an anonymous function that accepts any number of arguments using the rest operator (...args), but ignores them and simply returns "Hello World".
