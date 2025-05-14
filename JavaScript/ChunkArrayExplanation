@@ -1,0 +1,19 @@
+✅Explanation
+
+-   Split the input arr into subarrays (chunks) of size elements each.
+
+-   I initialize an empty result array to store the chunks.
+
+-   Then loop through arr in steps of size.
+
+-   Use Array.prototype.slice() to extract a portion of the array from index i to i + size.
+
+-   .slice() is safe here even if i + size exceeds array bounds.
+
+- Then push each chunk into the result array.
+
+-   Edge Cases:
+
+-   If arr is empty, the loop is skipped, and an empty array is returned.
+
+-   If size is greater than arr.length, one chunk containing the entire array is returned.
