@@ -1,0 +1,11 @@
+✅ Explanation
+
+-   I temporarily assign the function to the context object using a unique Symbol to avoid key collisions.
+
+-   Invoke the function as a method on the context using the spread arguments.
+
+-   Delete the temporary key after the function is called to clean up.
+
+-   Return the result of the function execution.
+
+-   This mimics the internal workings of Function.prototype.call, without actually using it.
