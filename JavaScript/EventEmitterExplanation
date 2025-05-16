@@ -1,0 +1,17 @@
+✅ Explanation
+
+-   this.events — A map where each key is an event name, and the value is an array of subscriber objects ({ eventName, callback }).
+
+-   subscribe(eventName, callback)
+
+    -   Adds a callback to the list of subscribers for eventName.
+
+    -   Returns an object with an unsubscribe() method that removes the callback from the list.
+
+-   emit(eventName, args)
+
+    -   Invokes all callbacks associated with the given eventName in the order they were added.
+
+    -   Returns an array of return values from the callbacks.
+
+-   The unsubscribe logic uses reference equality and closure to remove the exact callback.
