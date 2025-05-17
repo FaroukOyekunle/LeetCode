@@ -1,0 +1,7 @@
+✅ Explanation
+
+*   In JavaScript, two key methods enable custom behavior for operators:
+
+-  valueOf() — defines the primitive value of the object. This is used when using arithmetic operations like +.
+
+-   toString() — defines the string representation of an object. This is used when calling String(obj) or ${obj} in a template literal.
