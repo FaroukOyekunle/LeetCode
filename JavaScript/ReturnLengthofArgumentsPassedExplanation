@@ -1,0 +1,7 @@
+✅ Explanation
+
+-   The function argumentsLength uses the rest parameter syntax (...args) to collect all arguments passed into the function into an array-like variable named args.
+
+-   args.length gives the total number of arguments passed.
+
+-   This works regardless of argument type (e.g., number, object, string, null).
