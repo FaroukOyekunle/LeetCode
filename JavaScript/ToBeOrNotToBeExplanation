@@ -1,0 +1,7 @@
+✅ Explanation
+
+-   The expect function takes any value val and returns an object with two methods:
+
+    -   toBe(val2): Compares using strict equality (===). If not equal, throws "Not Equal".
+
+    -   notToBe(val2): Compares using strict inequality (!==). If equal, throws "Equal".
