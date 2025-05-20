@@ -1,0 +1,17 @@
+✅ Explanation
+
+1. Base case:
+
+    -   If obj is not an object or array, just return it (used in recursion).
+
+2. Array case:
+
+    -   Recursively compact each element with map.
+
+    -   Remove falsy values using filter(Boolean).
+
+3. Object case:
+
+    -   Recursively call compactObject on each value.
+
+    -   If the compacted value is truthy, retain the key in the final result.
