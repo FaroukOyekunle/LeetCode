@@ -1,0 +1,9 @@
+✅ Explanation
+
+-   The goal is to schedule a function fn to run after t milliseconds.
+
+-   If a cancellation function cancelFn is called before the timeout expires, the execution is prevented.
+
+-   We use setTimeout to schedule the call of fn(...args) after t ms.
+
+-   The returned cancelFn calls clearTimeout(timeoutId) to cancel the execution if it's still pending.
