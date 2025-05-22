@@ -1,0 +1,11 @@
+✅ Explanation
+
+-   We’re given an array of functions, each returning a Promise. The goal is to:
+
+1.  Execute all functions immediately in parallel (i.e., not sequentially).
+
+2.  Return a new Promise that:
+
+    -   resolves with an array of resolved values (in the same order) if all functions resolve.
+
+    -   rejects as soon as any one of them rejects — with that error.
