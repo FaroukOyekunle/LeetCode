@@ -1,0 +1,21 @@
+✅ Explanation:
+
+1.  Map Storage:
+
+    -   Use a Map to associate each object with its id for quick access and uniqueness.
+
+2.  First Pass (arr1):
+
+    -   Insert each object from arr1 into the map with a shallow copy.
+
+3.  Second Pass (arr2):
+
+    -   If the id already exists, merge the objects, giving preference to values from arr2.
+
+    -   If not, insert the new object.
+
+4.  Sorting:
+
+    -   Convert the map values to an array and sort by id in ascending order.
+
+⚠️ Note: This performs a shallow merge—nested objects like "b": {} will be replaced, not deeply merged. This aligns with the problem requirements (arr2 overrides).
