@@ -1,0 +1,9 @@
+✅ Explanation:
+
+-   Promise.all([promise1, promise2]): Waits for both promises to resolve.
+
+-   await: Ensures both values are retrieved before continuing.
+
+-   return value1 + value2: Returns a new promise that resolves with the sum.
+
+*   This handles both asynchronous resolution and summation cleanly.
