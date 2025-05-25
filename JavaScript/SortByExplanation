@@ -1,0 +1,7 @@
+✅ Explanation
+
+-   Array.prototype.sort() is used to sort the array.
+
+-   fn(a) and fn(b) are called to get the sort key for each element.
+
+-   Subtracting them (fn(a) - fn(b)) sorts the elements in ascending order of the key returned by fn.
