@@ -1,0 +1,9 @@
+✅ Explanation
+
+-   fn(...args) is called immediately at time 0.
+
+-   setInterval(fn, t) schedules repeated calls every t ms.
+
+-   clearInterval(intervalId) in the returned cancelFn will stop the repeated execution when called.
+
+-   We use setTimeout(cancelFn, cancelTimeMs) outside this function to invoke cancelFn at the desired cancel time.
