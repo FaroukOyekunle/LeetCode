@@ -1,0 +1,9 @@
+✅ Explanation:
+
+-   The class maintains a single property result to store the current state.
+
+-   Each arithmetic method performs the respective operation on this.result and returns this, enabling method chaining.
+
+-   The divide() method checks for division by zero and throws an error if encountered.
+
+-   getResult() returns the final computed value.
