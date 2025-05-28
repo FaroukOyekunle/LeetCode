@@ -1,0 +1,13 @@
+✅ Explanation:
+
+-   Object.keys(obj) returns an array of the object’s own enumerable property names.
+
+    -   For an object: it returns its keys.
+
+    -   For an array: it returns its indexes as strings (["0", "1", ...]).
+
+-   If the array length is 0, then:
+
+    -   The object has no keys → it's an empty object.
+
+    -   The array has no indices → it's an empty array.
