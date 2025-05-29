@@ -1,0 +1,21 @@
+✅  Explanation:
+
+1. tr -s ' ' '\n' < words.txt
+
+    -   It translates spaces into newlines and squeezes multiple spaces into one, effectively splitting words into lines.
+
+2. sort
+
+    -   Sorts words alphabetically to prepare for uniq.
+
+3. uniq -c
+
+    -   Counts the occurrences of each unique word.
+
+4. sort -nr
+
+    -   Sorts the lines numerically in reverse (descending frequency).
+
+5. awk '{print $2, $1}'
+
+    -   It rearranges the output to word count format.
