@@ -1,0 +1,15 @@
+✅ Explanation:
+
+This one-liner uses grep -E (extended regex) to match lines that follow either of the two valid phone number formats:
+
+1.  xxx-xxx-xxxx
+➤ Regex: [0-9]{3}-[0-9]{3}-[0-9]{4}
+
+2.  (xxx) xxx-xxxx
+➤ Regex: \([0-9]{3}\)\s[0-9]{3}-[0-9]{4}
+
+    -   \( and \) escape the parentheses
+
+    -   \s matches a space
+
+The ^ and $ ensure the entire line matches exactly one of the valid formats.
