@@ -1,0 +1,14 @@
+✅Explanation:
+-   awk processes the file line by line.
+
+-   NF is the number of fields (columns) in the current line.
+
+-   NR is the current record (line) number.
+
+-   a[i] stores the i-th column of all rows.
+
+-   On the first line, we initialize a[i] with the first row values.
+
+-   On subsequent lines, we concatenate values to a[i].
+
+-   In the END block, we print each collected column (which becomes a row in the transposed output).
