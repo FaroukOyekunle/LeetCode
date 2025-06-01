@@ -1,0 +1,13 @@
+✅ Explanation
+
+Problem:
+
+-   Print only the 10th line of a file named file.txt. If the file contains fewer than 10 lines, print nothing.
+
+-   sed is a stream editor that processes text line-by-line.
+
+-   The -n flag suppresses automatic printing.
+
+-   '10p' tells sed to print only the 10th line.
+
+-   If file.txt has fewer than 10 lines, nothing is printed — which is the desired behavior.
