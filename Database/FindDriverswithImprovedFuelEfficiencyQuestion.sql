@@ -32,7 +32,6 @@ Return the result table ordered by efficiency improvement in descending order, t
 
 The result format is in the following example.
 
-
 Example:
 
 Input:
@@ -76,7 +75,7 @@ Output:
 +-----------+---------------+------------------+-------------------+------------------------+
 Explanation:
 
-Alice Johnson (driver_id = 1):
+*   Alice Johnson (driver_id = 1):
 First half trips (Jan-Jun): Feb 15 (120.5/10.2 = 11.81), Mar 20 (200.0/16.5 = 12.12)
 First half average efficiency: (11.81 + 12.12) / 2 = 11.97
 Second half trips (Jul-Dec): Aug 10 (150.0/11.0 = 13.64), Sep 25 (180.0/12.5 = 14.40)
