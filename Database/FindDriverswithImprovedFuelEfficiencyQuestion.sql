@@ -84,8 +84,8 @@ Explanation:
 
 *   Bob Smith (driver_id = 2):
     *   First half trips: Jan 10 (100.0/9.0 = 11.11), Apr 15 (250.0/22.0 = 11.36)
-First half average efficiency: (11.11 + 11.36) / 2 = 11.24
-Second half trips: Oct 5 (200.0/15.0 = 13.33)
+    *   First half average efficiency: (11.11 + 11.36) / 2 = 11.24
+    *   Second half trips: Oct 5 (200.0/15.0 = 13.33)
 Second half average efficiency: 13.33
 Efficiency improvement: 13.33 - 11.24 = 2.10 (rounded to 2 decimal places)
 Drivers not included:
