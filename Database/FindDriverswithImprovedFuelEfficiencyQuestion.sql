@@ -87,7 +87,7 @@ Explanation:
     *   First half average efficiency: (11.11 + 11.36) / 2 = 11.24
     *   Second half trips: Oct 5 (200.0/15.0 = 13.33)
     *   Second half average efficiency: 13.33
-Efficiency improvement: 13.33 - 11.24 = 2.10 (rounded to 2 decimal places)
+    *   Efficiency improvement: 13.33 - 11.24 = 2.10 (rounded to 2 decimal places)
 Drivers not included:
 Carol Davis (driver_id = 3): Only has trips in first half (Mar, May)
 David Wilson (driver_id = 4): Only has trips in second half (Jul, Nov)
