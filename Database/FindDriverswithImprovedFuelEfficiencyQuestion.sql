@@ -90,7 +90,7 @@ Explanation:
     *   Efficiency improvement: 13.33 - 11.24 = 2.10 (rounded to 2 decimal places)
 
 *   Drivers not included:
-Carol Davis (driver_id = 3): Only has trips in first half (Mar, May)
+    *   Carol Davis (driver_id = 3): Only has trips in first half (Mar, May)
 David Wilson (driver_id = 4): Only has trips in second half (Jul, Nov)
 Emma Brown (driver_id = 5): Only has trips in first half (Feb)
 The output table is ordered by efficiency improvement in descending order then by name in ascending order.
