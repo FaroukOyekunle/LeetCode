@@ -13,7 +13,6 @@ Write a solution to find the nth highest distinct salary from the Employee table
 
 The result format is in the following example.
 
- 
 
 Example 1:
 
