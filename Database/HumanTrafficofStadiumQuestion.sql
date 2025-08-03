@@ -16,7 +16,6 @@ Write a solution to display the records with three or more rows with consecutive
 Return the result table ordered by visit_date in ascending order.
 
 The result format is in the following example.
- 
 
 Example 1:
 
