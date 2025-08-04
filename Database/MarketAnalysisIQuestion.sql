@@ -9,7 +9,6 @@ Table: Users
 +----------------+---------+
 user_id is the primary key (column with unique values) of this table.
 This table has the info of the users of an online shopping website where users can sell and buy items.
- 
 
 Table: Orders
 
