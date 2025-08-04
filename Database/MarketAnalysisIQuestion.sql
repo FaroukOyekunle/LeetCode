@@ -24,7 +24,6 @@ Table: Orders
 order_id is the primary key (column with unique values) of this table.
 item_id is a foreign key (reference column) to the Items table.
 buyer_id and seller_id are foreign keys to the Users table.
- 
 
 Table: Items
 
