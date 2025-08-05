@@ -41,7 +41,6 @@ Write a solution to find for each user, the join date and the number of orders t
 Return the result table in any order.
 
 The result format is in the following example.
-
  
 
 Example 1:
