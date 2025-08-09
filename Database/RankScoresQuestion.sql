@@ -19,7 +19,6 @@ Return the result table ordered by score in descending order.
 
 The result format is in the following example.
 
-
 Example 1:
 
 Input: 
