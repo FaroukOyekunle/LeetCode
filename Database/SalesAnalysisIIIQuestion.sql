@@ -24,7 +24,6 @@ Table: Sales
 This table can have duplicate rows.
 product_id is a foreign key (reference column) to the Product table.
 Each row of this table contains some information about one sale.
- 
 
 Write a solution to report the products that were only sold in the first quarter of 2019. That is, between 2019-01-01 and 2019-03-31 inclusive.
 
