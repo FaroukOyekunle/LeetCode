@@ -39,7 +39,6 @@ order_id is the primary key (column with unique values) for this table.
 com_id is a foreign key (reference column) to com_id from the Company table.
 sales_id is a foreign key (reference column) to sales_id from the SalesPerson table.
 Each row of this table contains information about one order. This includes the ID of the company, the ID of the salesperson, the date of the order, and the amount paid.
- 
 
 Write a solution to find the names of all the salespersons who did not have any orders related to the company with the name "RED".
 
