@@ -18,7 +18,6 @@ Write a solution to swap all 'f' and 'm' values (i.e., change all 'f' values to 
 Note that you must write a single update statement, do not write any select statement for this problem.
 
 The result format is in the following example.
-
  
 
 Example 1:
