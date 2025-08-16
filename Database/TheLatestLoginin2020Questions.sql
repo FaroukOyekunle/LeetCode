@@ -15,7 +15,6 @@ Write a solution to report the latest login for all users in the year 2020. Do n
 Return the result table in any order.
 
 The result format is in the following example.
- 
 
 Example 1:
 
