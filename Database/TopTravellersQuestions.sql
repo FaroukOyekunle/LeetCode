@@ -28,7 +28,6 @@ Write a solution to report the distance traveled by each user.
 Return the result table ordered by travelled_distance in descending order, if two or more users traveled the same distance, order them by their name in ascending order.
 
 The result format is in the following example.
- 
 
 Example 1:
 
