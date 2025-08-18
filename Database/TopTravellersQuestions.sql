@@ -8,7 +8,6 @@ Table: Users
 +---------------+---------+
 id is the column with unique values for this table.
 name is the name of the user.
- 
 
 Table: Rides
 
