@@ -21,7 +21,6 @@ Table: Rides
 +---------------+---------+
 id is the column with unique values for this table.
 user_id is the id of the user who traveled the distance "distance".
- 
 
 Write a solution to report the distance traveled by each user.
 
