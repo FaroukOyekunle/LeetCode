@@ -21,7 +21,6 @@ Write a solution to report the type of each node in the tree.
 Return the result table in any order.
 
 The result format is in the following example.
- 
 
 Example 1:
 
