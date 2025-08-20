@@ -10,7 +10,6 @@ id is the column with unique values for this table.
 Each row of this table contains information about the id of a node and the id of its parent node in a tree.
 The given structure is always a valid tree.
  
-
 Each node in the tree can be one of three types:
 
 "Leaf": if the node is a leaf node.
