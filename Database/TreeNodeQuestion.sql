@@ -50,7 +50,6 @@ Node 2 is an inner node because it has parent node 1 and child node 4 and 5.
 Nodes 3, 4, and 5 are leaf nodes because they have parent nodes and they do not have child nodes.
 Example 2:
 
-
 Input: 
 Tree table:
 +----+------+
