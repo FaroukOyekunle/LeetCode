@@ -34,7 +34,6 @@ Write a solution to find the cancellation rate of requests with unbanned users (
 Return the result table in any order.
 
 The result format is in the following example.
-
  
 
 Example 1:
