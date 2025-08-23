@@ -33,7 +33,6 @@ Write a solution to find all books that are currently borrowed (not returned) an
 Return the result table ordered by current borrowers in descending order, then by book title in ascending order.
 
 The result format is in the following example.
-
  
 Example:
 
