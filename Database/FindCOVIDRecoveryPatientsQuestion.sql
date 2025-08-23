@@ -33,7 +33,6 @@ Return the result table ordered by recovery_time in ascending order, then by pat
 
 The result format is in the following example.
 
-
 Example:
 
 Input:
