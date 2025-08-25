@@ -8,7 +8,6 @@ Table: Employees
 +-------------+---------+
 employee_id is the column with unique values for this table.
 Each row of this table indicates the name of the employee whose ID is employee_id.
- 
 
 Table: Salaries
 
