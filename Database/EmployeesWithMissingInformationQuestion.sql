@@ -19,7 +19,6 @@ Table: Salaries
 +-------------+---------+
 employee_id is the column with unique values for this table.
 Each row of this table indicates the salary of the employee whose ID is employee_id.
- 
 
 Write a solution to report the IDs of all the employees with missing information. The information of an employee is missing if:
 
