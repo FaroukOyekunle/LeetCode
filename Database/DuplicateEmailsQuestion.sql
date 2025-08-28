@@ -15,7 +15,6 @@ Write a solution to report all the duplicate emails. Note that it''s guaranteed 
 Return the result table in any order.
 
 The result format is in the following example.
-
  
 
 Example 1:
