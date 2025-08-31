@@ -12,7 +12,6 @@ id is the primary key (column with unique values) for this table.
 departmentId is a foreign key (reference columns) of the ID from the Department table.
 Each row of this table indicates the ID, name, and salary of an employee. It also contains the ID of their department.
  
-
 Table: Department
 
 +-------------+---------+
