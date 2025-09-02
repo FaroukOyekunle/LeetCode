@@ -16,7 +16,6 @@ The test cases are generated so that exactly one customer will have placed more 
 
 The result format is in the following example.
 
- 
 Example 1:
 
 Input: 
