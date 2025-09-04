@@ -26,7 +26,6 @@ Return the result table ordered by user_id in ascending order.
 
 The result format is in the following example.
 
-
 Example:
 
 Input:
