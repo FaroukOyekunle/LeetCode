@@ -25,7 +25,6 @@ Return the result table ordered by the result ordered by level in ascending orde
 
 The result format is in the following example.
 
- 
 
 Example:
 
