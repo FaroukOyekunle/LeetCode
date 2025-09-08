@@ -10,7 +10,6 @@ account is the primary key (column with unique values) for this table.
 Each row of this table contains the account number of each user in the bank.
 There will be no two users having the same name in the table.
  
-
 Table: Transactions
 
 +---------------+---------+
