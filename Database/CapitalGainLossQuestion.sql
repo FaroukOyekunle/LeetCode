@@ -21,7 +21,6 @@ The Capital gain/loss of a stock is the total gain or loss after buying and sell
 Return the result table in any order.
 
 The result format is in the following example.
- 
 
 Example 1:
 
