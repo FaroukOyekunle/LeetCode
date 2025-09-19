@@ -31,7 +31,6 @@ Return the result table ordered by improvement score in descending order, then b
 
 The result format is in the following example.
 
- 
 Example:
 
 Input:
