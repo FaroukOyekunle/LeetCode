@@ -35,7 +35,6 @@ Return the result table ordered by the number of meeting-heavy weeks in descendi
 The result format is in the following example.
 
  
-
 Example:
 
 Input:
