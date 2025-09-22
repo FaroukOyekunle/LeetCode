@@ -33,7 +33,6 @@ Return the result table ordered by customer_count in descending order, and in ca
 The result format is in the following example.
 
  
-
 Example:
 
 Input:
