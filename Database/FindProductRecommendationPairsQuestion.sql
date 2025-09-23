@@ -31,7 +31,6 @@ A product pair is considered for recommendation if at least 3 different customer
 Return the result table ordered by customer_count in descending order, and in case of a tie, by product1_id in ascending order, and then by product2_id in ascending order.
 
 The result format is in the following example.
-
  
 Example:
 
