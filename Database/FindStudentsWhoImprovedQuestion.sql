@@ -19,7 +19,6 @@ Return the result table ordered by student_id, subject in ascending order.
 The result format is in the following example.
 
  
-
 Example:
 
 Input:
