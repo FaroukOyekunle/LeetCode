@@ -14,7 +14,6 @@ event_day is the day at which this event happened, in_time is the minute at whic
 in_time and out_time are between 1 and 1440.
 It is guaranteed that no two events on the same day intersect in time, and in_time < out_time.
  
-
 Write a solution to calculate the total time in minutes spent by each employee on each day at the office. Note that within one day, an employee can enter and leave more than once. The time spent in the office for a single entry is out_time - in_time.
 
 Return the result table in any order.
