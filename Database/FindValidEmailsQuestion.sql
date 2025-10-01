@@ -16,7 +16,6 @@ The part before the @ symbol contains only alphanumeric characters and underscor
 The part after the @ symbol and before .com contains a domain name that contains only letters.
 Return the result table ordered by user_id in ascending order.
 
- 
 
 Example:
 
