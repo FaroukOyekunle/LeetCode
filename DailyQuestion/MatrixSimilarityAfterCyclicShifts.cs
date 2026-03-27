@@ -17,18 +17,15 @@ namespace DailyQuestion
 
                     if (currentRowIndex % 2 == 0)
                     {
-                        correspondingShiftedColumnIndex =
-                            (currentColumnIndex + normalizedShiftDistance) % totalColumnCount;
+                        correspondingShiftedColumnIndex = (currentColumnIndex + normalizedShiftDistance) % totalColumnCount;
                     }
 
                     else
                     {
-                        correspondingShiftedColumnIndex =
-                            (currentColumnIndex - normalizedShiftDistance + totalColumnCount) % totalColumnCount;
+                        correspondingShiftedColumnIndex = (currentColumnIndex - normalizedShiftDistance + totalColumnCount) % totalColumnCount;
                     }
 
-                    if (inputMatrix[currentRowIndex][currentColumnIndex] !=
-                        inputMatrix[currentRowIndex][correspondingShiftedColumnIndex])
+                    if (inputMatrix[currentRowIndex][currentColumnIndex] != inputMatrix[currentRowIndex][correspondingShiftedColumnIndex])
                     {
                         return false;
                     }
