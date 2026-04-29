@@ -4,8 +4,6 @@ The grid score is the sum of all grid[i][j] such that cell (i, j) is white and i
 
 Return the maximum score that can be achieved after some number of operations.
 
- 
-
 Example 1:
 
     Input: grid = [[0,0,0,0,0],[0,0,3,0,0],[0,1,0,0,0],[5,0,0,3,0],[0,0,0,0,2]]
