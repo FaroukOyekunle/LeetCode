@@ -71,12 +71,7 @@ namespace DailyQuestion
                                 currentColumnIndex,
                                 previousParenthesesBalance];
 
-                        bool canReachCurrentCellFromLeft =
-                            currentColumnIndex > 0 &&
-                            reachableBalanceStates[
-                                currentRowIndex,
-                                currentColumnIndex - 1,
-                                previousParenthesesBalance];
+                        bool canReachCurrentCellFromLeft = currentColumnIndex > 0 && reachableBalanceStates[currentRowIndex, currentColumnIndex - 1, previousParenthesesBalance];
 
                         if (canReachCurrentCellFromAbove || canReachCurrentCellFromLeft)
                         {
