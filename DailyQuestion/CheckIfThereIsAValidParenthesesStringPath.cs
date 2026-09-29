@@ -51,12 +51,9 @@ namespace DailyQuestion
                     int maximumReachableBalance =
                         currentRowIndex + currentColumnIndex + 1;
 
-                    for (int currentBalance = 0;
-                         currentBalance <= maximumReachableBalance;
-                         currentBalance++)
+                    for (int currentBalance = 0; currentBalance <= maximumReachableBalance; currentBalance++)
                     {
-                        int previousParenthesesBalance =
-                            currentBalance - currentParenthesesBalanceChange;
+                        int previousParenthesesBalance = currentBalance - currentParenthesesBalanceChange;
 
                         if (previousParenthesesBalance < 0 || previousParenthesesBalance > totalPathCellCount)
                         {
