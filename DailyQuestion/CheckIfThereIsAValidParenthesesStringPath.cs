@@ -58,18 +58,12 @@ namespace DailyQuestion
                         int previousParenthesesBalance =
                             currentBalance - currentParenthesesBalanceChange;
 
-                        if (previousParenthesesBalance < 0 ||
-                            previousParenthesesBalance > totalPathCellCount)
+                        if (previousParenthesesBalance < 0 || previousParenthesesBalance > totalPathCellCount)
                         {
                             continue;
                         }
 
-                        bool canReachCurrentCellFromAbove =
-                            currentRowIndex > 0 &&
-                            reachableBalanceStates[
-                                currentRowIndex - 1,
-                                currentColumnIndex,
-                                previousParenthesesBalance];
+                        bool canReachCurrentCellFromAbove = currentRowIndex > 0 && reachableBalanceStates[currentRowIndex - 1, currentColumnIndex, previousParenthesesBalance];
 
                         bool canReachCurrentCellFromLeft = currentColumnIndex > 0 && reachableBalanceStates[currentRowIndex, currentColumnIndex - 1, previousParenthesesBalance];
 
