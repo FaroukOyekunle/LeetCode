@@ -78,13 +78,9 @@ namespace DailyQuestion
                                 currentColumnIndex - 1,
                                 previousParenthesesBalance];
 
-                        if (canReachCurrentCellFromAbove ||
-                            canReachCurrentCellFromLeft)
+                        if (canReachCurrentCellFromAbove || canReachCurrentCellFromLeft)
                         {
-                            reachableBalanceStates[
-                                currentRowIndex,
-                                currentColumnIndex,
-                                currentBalance] = true;
+                            reachableBalanceStates[currentRowIndex, currentColumnIndex, currentBalance] = true;
                         }
                     }
                 }
