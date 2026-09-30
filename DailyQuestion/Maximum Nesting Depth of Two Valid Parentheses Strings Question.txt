@@ -2,7 +2,7 @@ A string is a valid parentheses string (denoted VPS) if and only if it consists 
 
 *   It is the empty string, or
 *   It can be written as AB (A concatenated with B), where A and B are VPS's, or
-*   It can be written as (A), where A is a VPS.
+*   It  can be written as (A), where A is a VPS.
 
 We can similarly define the nesting depth depth(S) of any VPS S as follows:
 
