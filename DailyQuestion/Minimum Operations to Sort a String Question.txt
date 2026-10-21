@@ -35,7 +35,6 @@ Example 3:
 	Explanation:
 
 	*	It is impossible to sort s under the given constraints. Thus, the answer is -1.
- 
 
 Constraints:
 
