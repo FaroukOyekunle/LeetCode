@@ -20,13 +20,13 @@ The grid contains four islands. The islands highlighted in blue have a total val
 Example 2:
 
 
-Input: grid = [[3,0,3,0], [0,3,0,3], [3,0,3,0]], k = 3
+	Input: grid = [[3,0,3,0], [0,3,0,3], [3,0,3,0]], k = 3
 
-Output: 6
+	Output: 6
 
-Explanation:
+	Explanation:
 
-The grid contains six islands, each with a total value that is divisible by 3.
+	The grid contains six islands, each with a total value that is divisible by 3.
 
 Constraints:
 
