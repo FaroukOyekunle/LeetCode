@@ -4,8 +4,6 @@ In one move, you may increase the value of any single element nums[i] by 1.
 
 Return the minimum total number of moves required so that all elements in nums become equal.
 
- 
-
 Example 1:
 
 	Input: nums = [2,1,3]
