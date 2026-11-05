@@ -24,10 +24,11 @@ For arr1[2]=8 we have:
 |8-9|=1 <= d=2
 |8-1|=7 > d=2
 |8-8|=0 <= d=2
+
 Example 2:
 
-Input: arr1 = [1,4,2,3], arr2 = [-4,-3,6,10,20,30], d = 3
-Output: 2
+	Input: arr1 = [1,4,2,3], arr2 = [-4,-3,6,10,20,30], d = 3
+	Output: 2
 
 Example 3:
 
