@@ -28,11 +28,11 @@ For queries[1]: Only server with id 3 gets no request in the duration [2,4].
 
 Constraints:
 
-1 <= n <= 105
-1 <= logs.length <= 105
-1 <= queries.length <= 105
-logs[i].length == 2
-1 <= logs[i][0] <= n
-1 <= logs[i][1] <= 106
+*	1 <= n <= 105
+*	1 <= logs.length <= 105
+*	1 <= queries.length <= 105
+*	logs[i].length == 2
+*	1 <= logs[i][0] <= n
+*	1 <= logs[i][1] <= 106
 *	1 <= x <= 105
 *	x < queries[i] <= 106
