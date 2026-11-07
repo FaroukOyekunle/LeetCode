@@ -12,8 +12,6 @@ Build an array ans​​​​ of length m, where ans[j] is the index of the ser
 
 Return the array ans​​​​.
 
- 
-
 Example 1:
 
 	Input: servers = [3,3,2], tasks = [1,2,3,2,1,2]
