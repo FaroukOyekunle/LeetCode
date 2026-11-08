@@ -29,8 +29,8 @@ Explanation: The two servers in the first row can communicate with each other. T
 
 Constraints:
 
-m == grid.length
-n == grid[i].length
-1 <= m <= 250
+*	m == grid.length
+*	n == grid[i].length
+*	1 <= m <= 250
 *	1 <= n <= 250
 *	grid[i][j] == 0 or 1
