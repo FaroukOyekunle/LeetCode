@@ -31,10 +31,10 @@ Request 3 comes in. It is handled by server 0 since the server is available.
 Server 0 handled two requests, while servers 1 and 2 handled one request each. Hence server 0 is the busiest server.
 Example 3:
 
-Input: k = 3, arrival = [1,2,3], load = [10,12,11]
-Output: [0,1,2]
-Explanation: Each server handles a single request, so they are all considered the busiest.
- 
+	Input: k = 3, arrival = [1,2,3], load = [10,12,11]
+	Output: [0,1,2]
+	
+	Explanation: Each server handles a single request, so they are all considered the busiest.
 
 Constraints:
 
