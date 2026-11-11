@@ -43,8 +43,6 @@ Explanation:
 
 Since no items are required (need1 = need2 = 0), we buy nothing and pay 0.
 
- 
-
 Constraints:
 
 *	1 <= cost1, cost2, costBoth <= 106
