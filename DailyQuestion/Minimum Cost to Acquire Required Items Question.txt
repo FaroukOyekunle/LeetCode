@@ -9,8 +9,6 @@ There are three types of items available:
 
 Return an integer representing the minimum possible total cost to achieve these requirements.
 
- 
-
 Example 1:
 
 	Input: cost1 = 3, cost2 = 2, costBoth = 1, need1 = 3, need2 = 2
