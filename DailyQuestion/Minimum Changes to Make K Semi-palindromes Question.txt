@@ -32,11 +32,11 @@ Explanation: Divide s into "ab" and "cac". "cac" is already semi-palindrome. Cha
 
 Example 2:
 
-Input: s = "abcdef", k = 2
+	Input: s = "abcdef", k = 2
 
-Output: 2
+	Output: 2
 
-Explanation: Divide s into substrings "abc" and "def". Each needs one change to become semi-palindrome.
+	Explanation: Divide s into substrings "abc" and "def". Each needs one change to become semi-palindrome.
 
 Example 3:
 
