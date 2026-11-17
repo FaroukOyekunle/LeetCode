@@ -24,11 +24,11 @@ All groups form palindromes. Therefore, "abcabc" is a semi-palindrome.
 
 Example 1:
 
-Input: s = "abcac", k = 2
+	Input: s = "abcac", k = 2
 
-Output: 1
+	Output: 1
 
-Explanation: Divide s into "ab" and "cac". "cac" is already semi-palindrome. Change "ab" to "aa", it becomes semi-palindrome with d = 1.
+	Explanation: Divide s into "ab" and "cac". "cac" is already semi-palindrome. Change "ab" to "aa", it becomes semi-palindrome with d = 1.
 
 Example 2:
 
