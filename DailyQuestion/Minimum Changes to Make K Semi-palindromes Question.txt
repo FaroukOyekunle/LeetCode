@@ -40,13 +40,11 @@ Explanation: Divide s into substrings "abc" and "def". Each needs one change to 
 
 Example 3:
 
-Input: s = "aabbaa", k = 3
+	Input: s = "aabbaa", k = 3
 
-Output: 0
+	Output: 0
 
-Explanation: Divide s into substrings "aa", "bb" and "aa". All are already semi-palindromes.
-
- 
+	Explanation: Divide s into substrings "aa", "bb" and "aa". All are already semi-palindromes.
 
 Constraints:
 
