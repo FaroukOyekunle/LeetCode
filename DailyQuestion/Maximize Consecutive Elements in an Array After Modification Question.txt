@@ -6,15 +6,14 @@ After that, you need to select one or more elements from the final array such th
 
 Return the maximum number of elements that you can select.
 
- 
-
 Example 1:
 
-Input: nums = [2,1,5,1,1]
-Output: 3
-Explanation: We can increase the elements at indices 0 and 3. The resulting array is nums = [3,1,5,2,1].
-We select the elements [3,1,5,2,1] and we sort them to obtain [1,2,3], which are consecutive.
-It can be shown that we cannot select more than 3 consecutive elements.
+	Input: nums = [2,1,5,1,1]
+	Output: 3
+	
+	Explanation: We can increase the elements at indices 0 and 3. The resulting array is nums = [3,1,5,2,1].
+	We select the elements [3,1,5,2,1] and we sort them to obtain [1,2,3], which are consecutive.
+	It can be shown that we cannot select more than 3 consecutive elements.
 
 Example 2:
 
