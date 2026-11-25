@@ -74,48 +74,25 @@ namespace DailyQuestion
                 currentSuffixRanks[suffixStartIndex] = numbers[suffixStartIndex];
             }
 
-            for (int comparisonLength = 1;
-                 comparisonLength < totalNumberOfElements;
-                 comparisonLength *= 2)
+            for (int comparisonLength = 1; comparisonLength < totalNumberOfElements; comparisonLength *= 2)
             {
-                Array.Sort(
-                    suffixArray,
-                    (firstSuffixStartIndex, secondSuffixStartIndex) =>
-                    {
-                        int firstSuffixCurrentRank =
-                            currentSuffixRanks[firstSuffixStartIndex];
+                Array.Sort(suffixArray, (firstSuffixStartIndex, secondSuffixStartIndex) =>
+                {
+                        int firstSuffixCurrentRank = currentSuffixRanks[firstSuffixStartIndex];
 
-                        int secondSuffixCurrentRank =
-                            currentSuffixRanks[secondSuffixStartIndex];
+                        int secondSuffixCurrentRank = currentSuffixRanks[secondSuffixStartIndex];
 
                         if (firstSuffixCurrentRank != secondSuffixCurrentRank)
                         {
-                            return firstSuffixCurrentRank.CompareTo(
-                                secondSuffixCurrentRank
-                            );
+                            return firstSuffixCurrentRank.CompareTo(secondSuffixCurrentRank);
                         }
 
-                        int firstSuffixNextRank =
-                            firstSuffixStartIndex + comparisonLength
-                                < totalNumberOfElements
-                            ? currentSuffixRanks[
-                                firstSuffixStartIndex + comparisonLength
-                            ]
-                            : -1;
+                        int firstSuffixNextRank = firstSuffixStartIndex + comparisonLength < totalNumberOfElements ? currentSuffixRanks[firstSuffixStartIndex + comparisonLength] : -1;
 
-                        int secondSuffixNextRank =
-                            secondSuffixStartIndex + comparisonLength
-                                < totalNumberOfElements
-                            ? currentSuffixRanks[
-                                secondSuffixStartIndex + comparisonLength
-                            ]
-                            : -1;
+                        int secondSuffixNextRank = secondSuffixStartIndex + comparisonLength < totalNumberOfElements ? currentSuffixRanks[secondSuffixStartIndex + comparisonLength] : -1;
 
-                        return firstSuffixNextRank.CompareTo(
-                            secondSuffixNextRank
-                        );
-                    }
-                );
+                        return firstSuffixNextRank.CompareTo(secondSuffixNextRank);
+                });
 
                 updatedSuffixRanks[suffixArray[0]] = 0;
 
