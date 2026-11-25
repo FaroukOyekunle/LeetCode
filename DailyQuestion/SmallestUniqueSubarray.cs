@@ -133,9 +133,7 @@ namespace DailyQuestion
 
             int[] longestCommonPrefixBySuffixRank = new int[totalNumberOfElements];
 
-            for (int suffixRank = 0;
-                 suffixRank < totalNumberOfElements;
-                 suffixRank++)
+            for (int suffixRank = 0; suffixRank < totalNumberOfElements; suffixRank++)
             {
                 int suffixStartIndex = suffixArray[suffixRank];
 
@@ -144,12 +142,9 @@ namespace DailyQuestion
 
             int currentCommonPrefixLength = 0;
 
-            for (int currentSuffixStartIndex = 0;
-                 currentSuffixStartIndex < totalNumberOfElements;
-                 currentSuffixStartIndex++)
+            for (int currentSuffixStartIndex = 0; currentSuffixStartIndex < totalNumberOfElements; currentSuffixStartIndex++)
             {
-                int currentSuffixRank =
-                    suffixRankByStartIndex[currentSuffixStartIndex];
+                int currentSuffixRank = suffixRankByStartIndex[currentSuffixStartIndex];
 
                 if (currentSuffixRank == 0)
                 {
@@ -157,30 +152,15 @@ namespace DailyQuestion
                     continue;
                 }
 
-                int previousSuffixStartIndex =
-                    suffixArray[currentSuffixRank - 1];
+                int previousSuffixStartIndex = suffixArray[currentSuffixRank - 1];
 
-                while (
-                    currentSuffixStartIndex + currentCommonPrefixLength
-                        < totalNumberOfElements
-                    &&
-                    previousSuffixStartIndex + currentCommonPrefixLength
-                        < totalNumberOfElements
-                    &&
-                    numbers[
-                        currentSuffixStartIndex + currentCommonPrefixLength
-                    ]
-                    ==
-                    numbers[
-                        previousSuffixStartIndex + currentCommonPrefixLength
-                    ]
-                )
+                while (currentSuffixStartIndex + currentCommonPrefixLength < totalNumberOfElements && previousSuffixStartIndex + currentCommonPrefixLength < totalNumberOfElements
+                    && numbers[currentSuffixStartIndex + currentCommonPrefixLength] == numbers[previousSuffixStartIndex + currentCommonPrefixLength])
                 {
                     currentCommonPrefixLength++;
                 }
 
-                longestCommonPrefixBySuffixRank[currentSuffixRank] =
-                    currentCommonPrefixLength;
+                longestCommonPrefixBySuffixRank[currentSuffixRank] = currentCommonPrefixLength;
 
                 if (currentCommonPrefixLength > 0)
                 {
@@ -190,6 +170,5 @@ namespace DailyQuestion
 
             return longestCommonPrefixBySuffixRank;
         }
-
     }
 }
