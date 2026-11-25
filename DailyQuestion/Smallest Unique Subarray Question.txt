@@ -31,9 +31,9 @@ Example 2:
 
 	Subarrays of length 1:
 
-	[2] → appears 2 times
-	[1] → appears once
-	[3] → appears 2 times
+	*	[2] → appears 2 times
+	*	[1] → appears once
+	*	[3] → appears 2 times
 	The subarray [1] is unique, so the smallest unique subarray length is 1.
 
 Example 3:
