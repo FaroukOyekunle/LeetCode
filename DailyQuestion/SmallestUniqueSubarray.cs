@@ -96,52 +96,27 @@ namespace DailyQuestion
 
                 updatedSuffixRanks[suffixArray[0]] = 0;
 
-                for (int suffixRank = 1;
-                     suffixRank < totalNumberOfElements;
-                     suffixRank++)
+                for (int suffixRank = 1; suffixRank < totalNumberOfElements; suffixRank++)
                 {
                     int previousSuffixStartIndex = suffixArray[suffixRank - 1];
                     int currentSuffixStartIndex = suffixArray[suffixRank];
 
-                    int previousSuffixCurrentRank =
-                        currentSuffixRanks[previousSuffixStartIndex];
+                    int previousSuffixCurrentRank = currentSuffixRanks[previousSuffixStartIndex];
 
-                    int currentSuffixCurrentRank =
-                        currentSuffixRanks[currentSuffixStartIndex];
+                    int currentSuffixCurrentRank = currentSuffixRanks[currentSuffixStartIndex];
 
-                    int previousSuffixNextRank =
-                        previousSuffixStartIndex + comparisonLength
-                            < totalNumberOfElements
-                        ? currentSuffixRanks[
-                            previousSuffixStartIndex + comparisonLength
-                        ]
-                        : -1;
+                    int previousSuffixNextRank = previousSuffixStartIndex + comparisonLength < totalNumberOfElements ? currentSuffixRanks[previousSuffixStartIndex + comparisonLength] : -1;
 
-                    int currentSuffixNextRank =
-                        currentSuffixStartIndex + comparisonLength
-                            < totalNumberOfElements
-                        ? currentSuffixRanks[
-                            currentSuffixStartIndex + comparisonLength
-                        ]
-                        : -1;
+                    int currentSuffixNextRank = currentSuffixStartIndex + comparisonLength < totalNumberOfElements ? currentSuffixRanks[currentSuffixStartIndex + comparisonLength] : -1;
 
-                    bool currentSuffixDiffersFromPreviousSuffix =
-                        previousSuffixCurrentRank != currentSuffixCurrentRank
-                        || previousSuffixNextRank != currentSuffixNextRank;
+                    bool currentSuffixDiffersFromPreviousSuffix = previousSuffixCurrentRank != currentSuffixCurrentRank || previousSuffixNextRank != currentSuffixNextRank;
 
-                    updatedSuffixRanks[currentSuffixStartIndex] =
-                        updatedSuffixRanks[previousSuffixStartIndex]
-                        + (currentSuffixDiffersFromPreviousSuffix ? 1 : 0);
+                    updatedSuffixRanks[currentSuffixStartIndex] = updatedSuffixRanks[previousSuffixStartIndex] + (currentSuffixDiffersFromPreviousSuffix ? 1 : 0);
                 }
 
-                Array.Copy(
-                    updatedSuffixRanks,
-                    currentSuffixRanks,
-                    totalNumberOfElements
-                );
+                Array.Copy(updatedSuffixRanks, currentSuffixRanks, totalNumberOfElements);
 
-                if (currentSuffixRanks[suffixArray[totalNumberOfElements - 1]]
-                    == totalNumberOfElements - 1)
+                if (currentSuffixRanks[suffixArray[totalNumberOfElements - 1]] == totalNumberOfElements - 1)
                 {
                     break;
                 }
