@@ -37,18 +37,12 @@ namespace DailyQuestion
 
                 if (currentSuffixRank > 0)
                 {
-                    maximumCommonPrefixLength = Math.Max(
-                        maximumCommonPrefixLength,
-                        longestCommonPrefixBySuffixRank[currentSuffixRank]
-                    );
+                    maximumCommonPrefixLength = Math.Max(maximumCommonPrefixLength, longestCommonPrefixBySuffixRank[currentSuffixRank]);
                 }
 
                 if (currentSuffixRank < totalNumberOfElements - 1)
                 {
-                    maximumCommonPrefixLength = Math.Max(
-                        maximumCommonPrefixLength,
-                        longestCommonPrefixBySuffixRank[currentSuffixRank + 1]
-                    );
+                    maximumCommonPrefixLength = Math.Max(maximumCommonPrefixLength, longestCommonPrefixBySuffixRank[currentSuffixRank + 1]);
                 }
 
                 int shortestUniqueSubarrayLength = maximumCommonPrefixLength + 1;
@@ -60,10 +54,7 @@ namespace DailyQuestion
                     continue;
                 }
 
-                minimumUniqueSubarrayLength = Math.Min(
-                    minimumUniqueSubarrayLength,
-                    shortestUniqueSubarrayLength
-                );
+                minimumUniqueSubarrayLength = Math.Min(minimumUniqueSubarrayLength, shortestUniqueSubarrayLength);
             }
 
             return minimumUniqueSubarrayLength;
@@ -77,9 +68,7 @@ namespace DailyQuestion
             int[] currentSuffixRanks = new int[totalNumberOfElements];
             int[] updatedSuffixRanks = new int[totalNumberOfElements];
 
-            for (int suffixStartIndex = 0;
-                 suffixStartIndex < totalNumberOfElements;
-                 suffixStartIndex++)
+            for (int suffixStartIndex = 0; suffixStartIndex < totalNumberOfElements; suffixStartIndex++)
             {
                 suffixArray[suffixStartIndex] = suffixStartIndex;
                 currentSuffixRanks[suffixStartIndex] = numbers[suffixStartIndex];
