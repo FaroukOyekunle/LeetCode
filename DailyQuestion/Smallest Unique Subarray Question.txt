@@ -10,16 +10,16 @@ Two subarrays are considered identical if they have the same length and the same
 
 Example 1:
 
-Input: nums = [3,3,3]
+	Input: nums = [3,3,3]
 
-Output: 3
+	Output: 3
 
-Explanation:
+	Explanation:
 
-Subarrays of length 1: [3] → appears 3 times
-Subarrays of length 2: [3, 3] → appears 2 times
-Subarrays of length 3: [3, 3, 3] → appears once
-The subarray [3, 3, 3] is unique, so the smallest unique subarray length is 3.
+	*	Subarrays of length 1: [3] → appears 3 times
+	*	Subarrays of length 2: [3, 3] → appears 2 times
+	*	Subarrays of length 3: [3, 3, 3] → appears once
+	The subarray [3, 3, 3] is unique, so the smallest unique subarray length is 3.
 
 Example 2:
 
