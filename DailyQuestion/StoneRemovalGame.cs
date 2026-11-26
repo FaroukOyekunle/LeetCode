@@ -4,7 +4,6 @@ namespace DailyQuestion
 {
     public class StoneRemovalGame
     {
-
         public bool CanAliceWin(int totalNumberOfStones)
         {
             int stonesRequiredForCurrentTurn = 10;
