@@ -7,8 +7,6 @@ The player who cannot make a move loses the game.
 
 Given a positive integer n, return true if Alice wins the game and false otherwise.
 
- 
-
 Example 1:
 
 	Input: n = 12
