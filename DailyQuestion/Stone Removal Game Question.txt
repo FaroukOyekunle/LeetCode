@@ -28,7 +28,7 @@ Example 2:
 
 	Explanation:
 
-	Alice cannot remove 10 stones, so Alice loses.
+	*	Alice cannot remove 10 stones, so Alice loses.
  
 Constraints:
 
