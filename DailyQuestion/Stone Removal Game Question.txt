@@ -17,8 +17,8 @@ Example 1:
 
 	Explanation:
 
-	Alice removes 10 stones on her first turn, leaving 2 stones for Bob.
-	Bob cannot remove 9 stones, so Alice wins.
+	*	Alice removes 10 stones on her first turn, leaving 2 stones for Bob.
+	*	Bob cannot remove 9 stones, so Alice wins.
 
 Example 2:
 
