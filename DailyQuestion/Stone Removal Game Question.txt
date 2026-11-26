@@ -11,23 +11,24 @@ Given a positive integer n, return true if Alice wins the game and false otherwi
 
 Example 1:
 
-Input: n = 12
+	Input: n = 12
 
-Output: true
+	Output: true
 
-Explanation:
+	Explanation:
 
-Alice removes 10 stones on her first turn, leaving 2 stones for Bob.
-Bob cannot remove 9 stones, so Alice wins.
+	Alice removes 10 stones on her first turn, leaving 2 stones for Bob.
+	Bob cannot remove 9 stones, so Alice wins.
+
 Example 2:
 
-Input: n = 1
+	Input: n = 1
 
-Output: false
+	Output: false
 
-Explanation:
+	Explanation:
 
-Alice cannot remove 10 stones, so Alice loses.
+	Alice cannot remove 10 stones, so Alice loses.
  
 Constraints:
 
