@@ -13,15 +13,16 @@ Return the maximum total number of item copies you can obtain, including both pu
 
 Example 1:
 
-Input: items = [[6,2],[2,6],[3,4]], budget = 9
+	Input: items = [[6,2],[2,6],[3,4]], budget = 9
 
-Output: 4
+	Output: 4
 
-Explanation:
+	Explanation:
 
-You can buy 2 copies of item 0 and 1 copy of item 2 for a total cost of 2 * 2 + 4 = 8, which is not greater than budget = 9.
-Buying item 2 gives 1 free copy of item 0, because factor2 = 3 divides factor0 = 6.
-You leave with 3 purchased copies and 1 free copy, for a total of 4 item copies.
+	*	You can buy 2 copies of item 0 and 1 copy of item 2 for a total cost of 2 * 2 + 4 = 8, which is not greater than budget = 9.
+	*	Buying item 2 gives 1 free copy of item 0, because factor2 = 3 divides factor0 = 6.
+	*	You leave with 3 purchased copies and 1 free copy, for a total of 4 item copies.
+
 Example 2:
 
 	Input: items = [[2,4],[3,2],[4,1],[6,4],[12,4]], budget = 8
