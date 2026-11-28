@@ -8,9 +8,8 @@ Each purchased copy of item i can give you at most one free copy of another item
 The free item must satisfy i != j and factori divides factorj.
 For each ordered pair (i, j), you can receive a free copy of item j from purchases of item i at most once, regardless of how many copies of item i you buy.
 The same item j can be received multiple times for free if it is received from purchases of different item types.
-Return the maximum total number of item copies you can obtain, including both purchased copies and free copies, while spending at most budget on purchased items.
 
- 
+Return the maximum total number of item copies you can obtain, including both purchased copies and free copies, while spending at most budget on purchased items.
 
 Example 1:
 
