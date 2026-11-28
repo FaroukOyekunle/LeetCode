@@ -26,18 +26,18 @@ The other purchased copy of item 0 gives 1 free copy of item 2, because factor0 
 You leave with 3 purchased copies and 2 free copies, for a total of 5 item copies.
 Example 2:
 
-Input: items = [[2,8],[1,10],[6,6],[4,12],[5,20],[5,17]], budget = 35
+	Input: items = [[2,8],[1,10],[6,6],[4,12],[5,20],[5,17]], budget = 35
 
-Output: 7
+	Output: 7
 
-Explanation:
+	Explanation:
 
-You can buy 2 copies of item 0, 1 copy of item 1, and 1 copy of item 2 for a total cost of 2 * 8 + 10 + 6 = 32, which is not greater than budget = 35.
-One purchased copy of item 0 gives 1 free copy of item 2, because factor0 = 2 divides factor2 = 6.
-The other purchased copy of item 0 gives 1 free copy of item 3, because factor0 = 2 divides factor3 = 4.
-The purchased copy of item 1 gives 1 free copy of item 2, because factor1 = 1 divides factor2 = 6.
-Buying item 2 gives no free copy, because factor2 = 6 does not divide the factor of any other item.
-You leave with 4 purchased copies and 3 free copies, for a total of 7 item copies.
+	*	You can buy 2 copies of item 0, 1 copy of item 1, and 1 copy of item 2 for a total cost of 2 * 8 + 10 + 6 = 32, which is not greater than budget = 35.
+	*	One purchased copy of item 0 gives 1 free copy of item 2, because factor0 = 2 divides factor2 = 6.
+	*	The other purchased copy of item 0 gives 1 free copy of item 3, because factor0 = 2 divides factor3 = 4.
+	*	The purchased copy of item 1 gives 1 free copy of item 2, because factor1 = 1 divides factor2 = 6.
+	*	Buying item 2 gives no free copy, because factor2 = 6 does not divide the factor of any other item.
+	*	You leave with 4 purchased copies and 3 free copies, for a total of 7 item copies.
  
 
 Constraints:
